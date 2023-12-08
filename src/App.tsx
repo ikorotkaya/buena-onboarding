@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from './Layout';
 import Name from './pages/onboarding/Name';
 import Email from './pages/onboarding/Email';
@@ -13,10 +13,15 @@ import { useEffect } from 'react';
 
 function App() {
   const { setCurrentPageIndex } = useOnboardingStore();
+  const location = useLocation();
 
   useEffect (() => {
     setCurrentPageIndex(getCurrentPageIndex());
   }, []);
+
+  useEffect(() => {
+    setCurrentPageIndex(getCurrentPageIndex());
+  }, [location]);
 
   return (
     <>
