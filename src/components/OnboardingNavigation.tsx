@@ -14,16 +14,18 @@ export default function OnboardingNavigation() {
   }, [currentPageIndex]);
 
   return (
-    <div>
+    <div className="flex">
       { previousPage && (
-        <Link 
+        <Link
+          className="py-2 px-4 rounded bg-gray-200 mr-2" 
           onClick={() => setCurrentPageIndex(currentPageIndex - 1)}
           to={`/onboarding/${previousPage}`}>
           Back
         </Link>
       )}
       { nextPage && (
-        <Link 
+        <Link
+        className="py-2 px-4 rounded bg-gray-200" 
           onClick={() => setCurrentPageIndex(currentPageIndex + 1)}
           to={`/onboarding/${nextPage}`}>
           Next

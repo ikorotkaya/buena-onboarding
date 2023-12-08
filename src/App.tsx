@@ -1,4 +1,3 @@
-import './App.css'
 import { Routes, Route } from "react-router-dom";
 import Layout from './Layout';
 import Name from './pages/onboarding/screens/Name';
