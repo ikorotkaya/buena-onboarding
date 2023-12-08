@@ -1,14 +1,11 @@
-import { Link } from "react-router-dom";
+import OnboardingNavigation from "../../../components/OnboardingNavigation";
 
 export default function PhoneNumber() {
   return (
     <div>
       <h2>PhoneNumber</h2>
 
-      <div>
-        <Link to="/onboarding/email">Back</Link>
-        <Link to="/onboarding/income">Next</Link>
-      </div>
+      <OnboardingNavigation />
     </div>
   );
 }
