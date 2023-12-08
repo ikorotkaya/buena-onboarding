@@ -1,13 +1,13 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import Layout from './Layout';
-import Name from './onboarding/screens/Name';
-import Email from './onboarding/screens/Email';
-import PhoneNumber from './onboarding/screens/PhoneNumber';
-import Income from './onboarding/screens/Income';
-import Summary from './onboarding/screens/Summary';
-import HomePage from './Home';
-import NoMatch from './NoMatch';
+import Name from './pages/onboarding/screens/Name';
+import Email from './pages/onboarding/screens/Email';
+import PhoneNumber from './pages/onboarding/screens/PhoneNumber';
+import Income from './pages/onboarding/screens/Income';
+import Summary from './pages/onboarding/screens/Summary';
+import HomePage from './pages/HomePage';
+import NoMatch from './pages/NoMatch';
 
 function App() {
   return (
