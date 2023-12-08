@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { pages } from "../utils/onboarding-routing";
 import { useOnboardingStore } from "../store";
 
@@ -7,7 +8,10 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between">
       <div>
-        <img src="/logo.svg" alt="Buena" />
+        <Link
+          to="/">
+          <img src="/logo.svg" alt="Buena" />
+        </Link>
       </div>
 
       <div>
