@@ -12,8 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="name" element={<Name />} />
-          <Route path="email" element={<Email />} />
+          <Route path="onboarding/name" element={<Name />} />
+          <Route path="onboarding/email" element={<Email />} />
 
           <Route path="*" element={<NoMatch />} />
         </Route>

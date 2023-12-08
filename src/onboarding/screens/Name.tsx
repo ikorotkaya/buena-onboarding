@@ -5,7 +5,7 @@ export default function Name() {
     <div>
       <h2>Name</h2>
 
-      <Link to="/email">Next</Link>
+      <Link to="/onboarding/email">Next</Link>
     </div>
   );
 }

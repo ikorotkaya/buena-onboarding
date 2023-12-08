@@ -5,7 +5,7 @@ export default function Email() {
     <div>
       <h2>Email</h2>
 
-      <Link to="/name">Back</Link>
+      <Link to="/onboarding/name">Back</Link>
     </div>
   );
 }

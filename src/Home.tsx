@@ -5,7 +5,7 @@ export default function HomePage() {
     <div>
       <h1>Welcome</h1>
 
-      <Link to="/name">Get started</Link>
+      <Link to="/onboarding/name">Get started</Link>
     </div>
   );
 }
