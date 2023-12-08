@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { pages, getCurrentPageIndex } from "../utils/onboarding-routing";
+import { pages } from "../utils/onboarding-routing";
 import { useEffect, useState } from "react";
+import { useOnboardingStore } from "../store";
 
 export default function OnboardingNavigation() {
-  const [currentPageIndex, setCurrentPageIndex] = useState(getCurrentPageIndex());
+  const { currentPageIndex, setCurrentPageIndex } = useOnboardingStore(); 
   const [nextPage, setNextPage] = useState(pages[currentPageIndex + 1]);
   const [previousPage, setPreviousPage] = useState(pages[currentPageIndex - 1]);
 

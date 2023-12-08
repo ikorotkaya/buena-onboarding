@@ -8,8 +8,17 @@ import Income from './pages/onboarding/screens/Income';
 import Summary from './pages/onboarding/screens/Summary';
 import HomePage from './pages/HomePage';
 import NoMatch from './pages/NoMatch';
+import { useOnboardingStore } from './store';
+import { getCurrentPageIndex } from './utils/onboarding-routing';
+import { useEffect } from 'react';
 
 function App() {
+  const { setCurrentPageIndex } = useOnboardingStore();
+
+  useEffect (() => {
+    setCurrentPageIndex(getCurrentPageIndex());
+  }, []);
+
   return (
     <>
       <Routes>
