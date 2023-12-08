@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from './Layout';
-import Name from './pages/onboarding/screens/Name';
-import Email from './pages/onboarding/screens/Email';
-import PhoneNumber from './pages/onboarding/screens/PhoneNumber';
-import Income from './pages/onboarding/screens/Income';
-import Summary from './pages/onboarding/screens/Summary';
+import Name from './pages/onboarding/Name';
+import Email from './pages/onboarding/Email';
+import PhoneNumber from './pages/onboarding/PhoneNumber';
+import Income from './pages/onboarding/Income';
+import Summary from './pages/onboarding/Summary';
 import HomePage from './pages/HomePage';
 import NoMatch from './pages/NoMatch';
 import { useOnboardingStore } from './store';

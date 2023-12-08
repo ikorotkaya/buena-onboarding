@@ -1,4 +1,4 @@
-import OnboardingNavigation from "../../../components/OnboardingNavigation";
+import OnboardingNavigation from "../../components/OnboardingNavigation";
 
 export default function Summary() {
   return (
