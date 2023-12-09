@@ -1,13 +1,23 @@
 import { Outlet } from "react-router-dom";
-import OnboardingNavbar from "./components/OnboardingNavbar";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/OnboardingNavbar";
+import OnboardingNavigation from "./components/OnboardingNavigation";
 
 export default function OnboardingLayout() {
-
   return (
-    <div className="container grid grid-rows-[6vh,1fr] min-h-screen h-screen px-6">
-      <OnboardingNavbar />
+    <div className="grid col-auto	p-8 md:p-0 md:grid-cols-[1fr,2fr] md:gap-4 md:h-screen">
+      <aside className="hidden md:block">
+        <Sidebar />
+      </aside>
 
-      <Outlet />
+      <main className="">
+        <Navbar className="px-8 py-4 fixed top-0 left-0 md:hidden" />
+        
+        <Outlet />
+
+        <OnboardingNavigation 
+          className="fixed bottom-0 left-0 md:hidden" />
+      </main>
     </div>
   );
 }

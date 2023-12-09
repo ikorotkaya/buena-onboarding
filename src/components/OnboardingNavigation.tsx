@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useOnboardingStore } from "../store";
 import SubmitButton from "./Submitbutton";
 
-export default function OnboardingNavigation() {
+export default function OnboardingNavigation({ className = "" }: { className?: string}) {
   const { currentPageIndex } = useOnboardingStore();
   const [nextPage, setNextPage] = useState(pages[currentPageIndex + 1]);
   const [previousPage, setPreviousPage] = useState(pages[currentPageIndex - 1]);
@@ -15,7 +15,7 @@ export default function OnboardingNavigation() {
   }, [currentPageIndex]);
 
   return (
-    <div className="flex flex-row gap-4">
+    <div className={`flex flex-row justify-between gap-4 ${className}`}>
       {previousPage && (
         <Link
           to={`/onboarding/${previousPage}`}
@@ -43,7 +43,7 @@ export default function OnboardingNavigation() {
       {nextPage && (
         <Link
           to={`/onboarding/${nextPage}`}
-          className="flex items-center justify-center px-4 py-2 text-base font-medium  text-gray-500 whitespace-no-wrap bg-white border-2 rounded-full shadow-lg hover:bg-black hover:text-white hover:border-black focus:outline-none"
+          className="flex ml-auto items-center justify-center px-4 py-2 text-base font-medium  text-gray-500 whitespace-no-wrap bg-white border-2 rounded-full shadow-lg hover:bg-black hover:text-white hover:border-black focus:outline-none"
         >
           Next
           <svg
@@ -62,7 +62,8 @@ export default function OnboardingNavigation() {
           </svg>
         </Link>
       )}
-        {!nextPage && <SubmitButton />}
+
+      {!nextPage && <SubmitButton />}
     </div>
   );
 }

@@ -1,14 +1,12 @@
 import OnboardingNavigation from "../../components/OnboardingNavigation";
-import Sidebar from "../../components/Sidebar";
+
 import { useOnboardingStore } from "../../store";
 
 export default function Email() {
   const { email, setEmail } = useOnboardingStore();
 
   return (
-    <div className="flex flex-col justify-center items-center md:grid jg:gap-3 md:grid-cols-3">
-      <Sidebar />
-
+    <div className="flex flex-col justify-center items-center md:grid jg:gap-3 md:grid-cols-3">      
       <div className="col-span-2 flex flex-col justify-center items-center">
         <h2 className="mt-2 text-4xl font-bold text-gray-900 sm:text-5xl">
           What is your email?
