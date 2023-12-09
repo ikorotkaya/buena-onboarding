@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { pages } from "../utils/onboarding-routing";
 import { useEffect, useState } from "react";
 import { useOnboardingStore } from "../store";
-import SubmitButton from "./Submitbutton";
 
 export default function OnboardingNavigation({ className = "" }: { className?: string}) {
   const { currentPageIndex } = useOnboardingStore();
@@ -38,9 +37,7 @@ export default function OnboardingNavigation({ className = "" }: { className?: s
             ></path>
           </svg>
         </Link>
-      )}
-
-      {!nextPage && <SubmitButton />}
+      )}      
     </div>
   );
 }

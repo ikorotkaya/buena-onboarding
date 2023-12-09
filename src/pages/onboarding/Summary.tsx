@@ -1,5 +1,5 @@
-import OnboardingNavigation from "../../components/OnboardingNavigation";
 import { useOnboardingStore } from "../../store";
+import SubmitButton from "../../components/Submitbutton";
 
 export default function Summary() {
   const { name, email, phoneNumber, income } = useOnboardingStore();
@@ -25,8 +25,7 @@ export default function Summary() {
         </div>
       </div>
 
-      <OnboardingNavigation
-        className="hidden md:flex" />
+      <SubmitButton />
     </div>
   );
 }
