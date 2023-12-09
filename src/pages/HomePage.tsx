@@ -8,7 +8,7 @@ export default function HomePage() {
       </h2>
 
       <div className="flex justify-center text-lg leading-8 text-gray-600">
-        <p>Enter your personal details and start your journey today.</p>
+        Enter your personal details and start your journey today.
       </div>
 
       <div className="flex flex-row justify-center items-end pb-4">
