@@ -7,12 +7,14 @@ type OnboardingStore = {
   phoneNumber: string;
   income: string;
   currentPageIndex: number;
+  isNextButtonDisabled: boolean;
 
   setName: (name: string) => void;
   setEmail: (email: string) => void;
   setPhoneNumber: (phoneNumber: string) => void;
   setIncome: (income: string) => void;  
   setCurrentPageIndex: (page: number) => void;  
+  setIsNextButtonDisabled: (disabled: boolean) => void;
 };
 
 type OnboardingStoreState = {
@@ -27,12 +29,14 @@ export const useOnboardingStore = create(
       phoneNumber: "",
       income: "",
       currentPageIndex: 0,
+      isNextButtonDisabled: true,
 
       setName: (name) => set({ name }),
       setEmail: (email) => set({ email }),
       setPhoneNumber: (phoneNumber) => set({ phoneNumber }),
       setIncome: (income) => set({ income }),
-      setCurrentPageIndex: (currentPageIndex) => set({ currentPageIndex }),      
+      setCurrentPageIndex: (currentPageIndex) => set({ currentPageIndex }),
+      setIsNextButtonDisabled: (isNextButtonDisabled) => set({ isNextButtonDisabled }),
     }),
     {
       name: "onboarding-storage",

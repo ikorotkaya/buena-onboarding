@@ -2,8 +2,11 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/OnboardingNavbar";
 import OnboardingNavigation from "./components/OnboardingNavigation";
+import { useOnboardingStore } from "./store";
 
 export default function OnboardingLayout() {
+  const {isNextButtonDisabled} = useOnboardingStore();
+
   return (
     <div className="grid col-auto	p-8 md:p-0 md:grid-cols-[1fr,2fr] md:gap-4 md:h-screen">
       <aside className="hidden md:block">
@@ -15,7 +18,8 @@ export default function OnboardingLayout() {
         
         <Outlet />
 
-        <OnboardingNavigation 
+        <OnboardingNavigation
+          disabled={isNextButtonDisabled} 
           className="fixed bottom-0 left-0 md:hidden" />
       </main>
     </div>

@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import OnboardingNavigation from "../../components/OnboardingNavigation";
 import { useOnboardingStore } from "../../store";
 
@@ -10,7 +11,17 @@ const incomeRanges = [
 ];
 
 export default function Income() {
-  const { income, setIncome } = useOnboardingStore();
+  const { income, setIncome, isNextButtonDisabled, setIsNextButtonDisabled } = useOnboardingStore();
+
+  const handleIncomeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newIncome = e.target.value;
+    setIncome(newIncome);
+
+  }
+  
+  useEffect(() => {
+    setIsNextButtonDisabled(income === "");
+  }, [income]);
 
   return (
     <div className="flex flex-col pt-48 md:max-w-xl">
@@ -30,7 +41,7 @@ export default function Income() {
                 id={`income-${index}`}
                 value={range.value}
                 checked={income === range.value}
-                onChange={() => setIncome(range.value)}
+                onChange={handleIncomeChange}
                 className="h-4.5 w-4.5 mr-2 border-gray-300 text-bclack focus:ring-black cursor-pointer"
               />
             
@@ -41,7 +52,9 @@ export default function Income() {
       </div>
 
       <OnboardingNavigation
-        className="hidden md:flex" />
+        className="hidden md:flex"
+        disabled={isNextButtonDisabled} 
+      />
     </div>
   );
 }
