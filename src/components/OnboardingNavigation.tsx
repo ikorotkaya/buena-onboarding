@@ -45,7 +45,7 @@ export default function OnboardingNavigation({ className = "" }: { className?: s
           to={`/onboarding/${nextPage}`}
           className="w-full md:w-auto flex md:ml-auto items-center justify-center 
             px-4 py-2 text-base font-medium  text-gray-500 whitespace-no-wrap
-          bg-white border-2 rounded-md hover:bg-black 
+          bg-white border-2 rounded-full hover:bg-black 
           hover:text-white hover:border-black focus:outline-none"
         >
           Next
