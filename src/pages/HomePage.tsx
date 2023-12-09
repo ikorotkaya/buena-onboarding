@@ -6,14 +6,14 @@ export default function HomePage() {
       <h2 className="flex items-end justify-center text-4xl font-bold text-gray-900 sm:text-6xl mb-4">
         Welcome to Buena
       </h2>
+
       <div className="flex justify-center text-lg leading-8 text-gray-600">
-        <p>
-          Enter your personal details and start your journey today.
-        </p>
+        <p>Enter your personal details and start your journey today.</p>
       </div>
-    <div className="flex flex-row justify-center items-end pb-4">
-      <GetStartedButton />
-    </div>
+
+      <div className="flex flex-row justify-center items-end pb-4">
+        <GetStartedButton />
+      </div>
     </div>
   );
 }

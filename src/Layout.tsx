@@ -4,10 +4,12 @@ import Navbar from "./components/Navbar";
 export default function Layout() {
 
   return (
-    <div className="container grid grid-rows-[6vh,1fr] min-h-screen h-screen px-6">
+    <div className="h-screen">
       <Navbar />
-
-      <Outlet />
+      
+      <div className="container px-6">
+        <Outlet />
+      </div>
     </div>
   );
 }
