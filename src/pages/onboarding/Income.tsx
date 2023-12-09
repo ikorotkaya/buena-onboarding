@@ -23,7 +23,7 @@ export default function Income() {
           <div key={range.value} className="flex items-center">
             <label 
               htmlFor={`income-${index}`}
-              className="ml-3 flex items-center text-sm leading-0 font-medium leading-6 cursor-pointer">
+              className="flex items-center text-sm leading-0 font-medium leading-6 cursor-pointer">
               
               <input
                 type="radio"

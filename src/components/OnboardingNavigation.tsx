@@ -15,11 +15,11 @@ export default function OnboardingNavigation({ className = "" }: { className?: s
   }, [currentPageIndex]);
 
   return (
-    <div className={`flex flex-row justify-between gap-4 ${className}`}>
+    <div className={`flex flex-row justify-between gap-4 px-8 py-4 md:p-0 w-full ${className}`}>
       {previousPage && (
         <Link
           to={`/onboarding/${previousPage}`}
-          className="flex items-center justify-center px-4 py-2 text-base font-medium
+          className="hidden md:flex items-center justify-center px-4 py-2 text-base font-medium
            text-gray-500 whitespace-no-wrap bg-white border-2 rounded-full shadow-md hover:bg-black hover:text-white hover:border-black focus:outline-none"
         >
           <svg
@@ -43,7 +43,10 @@ export default function OnboardingNavigation({ className = "" }: { className?: s
       {nextPage && (
         <Link
           to={`/onboarding/${nextPage}`}
-          className="flex ml-auto items-center justify-center px-4 py-2 text-base font-medium  text-gray-500 whitespace-no-wrap bg-white border-2 rounded-full shadow-lg hover:bg-black hover:text-white hover:border-black focus:outline-none"
+          className="w-full md:w-auto flex md:ml-auto items-center justify-center 
+            px-4 py-2 text-base font-medium  text-gray-500 whitespace-no-wrap
+          bg-white border-2 rounded-md hover:bg-black 
+          hover:text-white hover:border-black focus:outline-none"
         >
           Next
           <svg
