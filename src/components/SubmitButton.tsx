@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-export default function GetStartedButton() {
+export default function SubmitButton() {
   return (
     <div>
       <Link
-        to="/onboarding/name"
+        to="/final-page"
 
         className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out border-2 border-yellow-500 rounded-full shadow-md group"
       >
@@ -25,9 +25,9 @@ export default function GetStartedButton() {
           </svg>
         </span>
         <span className="absolute flex items-center justify-center w-full h-full text-yellow-500 transition-all duration-300 transform group-hover:translate-x-full ease">
-          Get started
+          Submit
         </span>
-        <span className="relative invisible">Get started</span>
+        <span className="relative invisible">Submit</span>
       </Link>
     </div>
   );

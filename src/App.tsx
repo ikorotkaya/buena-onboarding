@@ -8,6 +8,7 @@ import Income from './pages/onboarding/Income';
 import Summary from './pages/onboarding/Summary';
 import HomePage from './pages/HomePage';
 import NoMatch from './pages/NoMatch';
+import FinalPage from './pages/FinalPage';
 import { useOnboardingStore } from './store';
 import { getCurrentPageIndex } from './utils/onboarding-routing';
 import { useEffect } from 'react';
@@ -31,6 +32,7 @@ function App() {
           <Route element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="*" element={<NoMatch />} />
+            <Route path="/final-page" element={<FinalPage />} />
           </Route>
 
           <Route path="/onboarding" element={<OnboardingLayout />}>
