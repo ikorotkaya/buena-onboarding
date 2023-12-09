@@ -16,7 +16,7 @@ export default function OnboardingNavigation({ className = "" }: { className?: s
 
   return (
     <div className={`flex flex-row justify-between gap-4 px-8 py-4 md:p-0 w-full ${className}`}>
-      {previousPage && (
+      {/* {previousPage && (
         <Link
           to={`/onboarding/${previousPage}`}
           className="hidden md:flex items-center justify-center px-4 py-2 text-base font-medium
@@ -38,15 +38,15 @@ export default function OnboardingNavigation({ className = "" }: { className?: s
           </svg>
           Back
         </Link>
-      )}
+      )} */}
 
       {nextPage && (
         <Link
           to={`/onboarding/${nextPage}`}
           className="w-full md:w-auto flex md:ml-auto items-center justify-center 
-            px-4 py-2 text-base font-medium  text-gray-500 whitespace-no-wrap
-          bg-white border-2 rounded-full hover:bg-black 
-          hover:text-white hover:border-black focus:outline-none"
+            px-4 py-2 text-base font-medium whitespace-no-wrap
+          border-2 rounded bg-black 
+          text-white hover:text-indigo-300 border-black focus:outline-none"
         >
           Next
           <svg
@@ -59,7 +59,7 @@ export default function OnboardingNavigation({ className = "" }: { className?: s
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="2"
+              strokeWidth="3"
               d="M14 5l7 7m0 0l-7 7m7-7H3"
             ></path>
           </svg>

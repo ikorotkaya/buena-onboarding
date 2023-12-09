@@ -6,7 +6,7 @@ export default function Name() {
 
   return (
     <div className="flex flex-col pt-48 md:max-w-xl">
-      <h2 className="block mb-8 text-4xl font-bold text-gray-900 sm:text-5xl">
+      <h2 className="block mb-8 text-3xl font-bold text-gray-900 sm:text-4xl">
         What is your full name?
       </h2>
       

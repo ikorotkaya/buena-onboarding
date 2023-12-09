@@ -20,7 +20,7 @@ export default function FinalPage() {
     <div className="grid grid-rows-[3fr,2fr,1fr]">
       <Confetti width={windowSize.width} height={windowSize.height} />
       
-      <h2 className="flex items-end justify-center text-4xl font-bold text-gray-900 sm:text-6xl mb-4">
+      <h2 className="flex items-end justify-center text-3xl font-bold text-gray-900 sm:text-4xl">
         Thank you for submitting your application!
       </h2>
 

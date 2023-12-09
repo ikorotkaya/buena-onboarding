@@ -1,6 +1,6 @@
 import ONBOARDING_PAGES from "../../onboarding-pages.json";
 
-export const pages = ONBOARDING_PAGES;
+export const pages = ONBOARDING_PAGES.map(page => page.slug);
 
 export const getCurrentPageIndex = (): number => {
   const pathname = window.location.pathname;
@@ -9,7 +9,7 @@ export const getCurrentPageIndex = (): number => {
 
   const pageName = pathname.split("/")[2];
 
-  const pageIndex = ONBOARDING_PAGES.indexOf(pageName);
+  const pageIndex = pages.indexOf(pageName);
 
   return pageIndex;
 }

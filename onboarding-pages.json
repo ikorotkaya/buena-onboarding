@@ -1,7 +1,7 @@
 [
-  "name", 
-  "email", 
-  "phone", 
-  "income", 
-  "summary"
+  { "name": "Name", "slug": "name", "storeKey": "name" },
+  { "name": "Email", "slug": "email", "storeKey": "email" }, 
+  { "name": "Phone number", "slug": "phone", "storeKey": "phoneNumber" }, 
+  { "name": "Income", "slug": "income", "storeKey": "income" }, 
+  { "name": "Summary", "slug": "summary", "storeKey": null }
 ]
