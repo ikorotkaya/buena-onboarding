@@ -8,10 +8,10 @@ type OnboardingStore = {
   income: string;
   currentPageIndex: number;
 
-  setFullName: (name: string) => void;
+  setName: (name: string) => void;
   setEmail: (email: string) => void;
   setPhoneNumber: (phoneNumber: string) => void;
-  setSalary: (income: string) => void;  
+  setIncome: (income: string) => void;  
   setCurrentPageIndex: (page: number) => void;  
 };
 
@@ -28,10 +28,10 @@ export const useOnboardingStore = create(
       income: "",
       currentPageIndex: 0,
 
-      setFullName: (name) => set({ name }),
+      setName: (name) => set({ name }),
       setEmail: (email) => set({ email }),
       setPhoneNumber: (phoneNumber) => set({ phoneNumber }),
-      setSalary: (income) => set({ income }),
+      setIncome: (income) => set({ income }),
       setCurrentPageIndex: (currentPageIndex) => set({ currentPageIndex }),      
     }),
     {
