@@ -36,6 +36,7 @@ Of course, I was short on time and haven't done everything I wanted to do. Here'
 
 - [x] Make submit button page-agnostic 
 - [ ] Make mobile "Next" button page-agnostic
+- [ ] Create static page to handle page refresh
 - [ ] Introduce a design system and align look and feel of all components (Storybook)
 - [ ] Add more animations and transitions
 - [ ] Add i18n support (I bet we'll have DE and EN speaking users) 
