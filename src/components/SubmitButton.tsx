@@ -1,10 +1,12 @@
 import { useOnboardingStore } from "../store";
 import { Link } from "react-router-dom";
+import ONBOARDING_PAGES from "../../onboarding-pages.json";
 
 export default function SubmitButton() {
-  const { nameValid, emailValid, phoneNumberValid, incomeValid } = useOnboardingStore();
+  const onboardingStore = useOnboardingStore();
 
-  const buttonEnabled = nameValid && emailValid && phoneNumberValid && incomeValid;
+  const validityStoreKeys = ONBOARDING_PAGES.filter((step) => step.storeKey).map((step) => step.storeKey);
+  const buttonEnabled = validityStoreKeys.every((storeKey) => onboardingStore[storeKey as string]);
 
   return (
     <>

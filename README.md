@@ -34,7 +34,7 @@ Check out the [design notes](design_notes/2_add_new_onboarding_page.md) for more
 
 Of course, I was short on time and haven't done everything I wanted to do. Here's the list of things I'd like to add/improve:
 
-- [ ] Make submit button fully page-agnostic 
+- [x] Make submit button fully page-agnostic 
 - [ ] Introduce a design system and align look and feel of all components (Storybook)
 - [ ] Add more animations and transitions
 - [ ] Add i18n support (I bet we'll have DE and EN speaking users) 
