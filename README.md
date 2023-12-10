@@ -30,6 +30,17 @@ The order of pages is configured via the [`onboarding-pages.json`](https://githu
 
 Check out the [design notes](design_notes/2_add_new_onboarding_page.md) for more details.
 
+## Next steps
+
+Of course, I was short on time and haven't done everything I wanted to do. Here's the list of things I'd like to add/improve:
+
+- [ ] Make submit button fully page-agnostic 
+- [ ] Introduce a design system and align look and feel of all components (Storybook)
+- [ ] Add more animations and transitions
+- [ ] Add i18n support (I bet we'll have DE and EN speaking users) 
+- [ ] Add coverage support for Jest
+- [ ] Add more unit and E2E tests
+
 ## Development 
 
 ### Installation
