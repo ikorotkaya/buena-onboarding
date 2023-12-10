@@ -7,14 +7,20 @@ type OnboardingStore = {
   phoneNumber: string;
   income: string;
   currentPageIndex: number;
-  isNextButtonDisabled: boolean;
+  nameValid: boolean;
+  emailValid: boolean;
+  phoneNumberValid: boolean;
+  incomeValid: boolean;
 
   setName: (name: string) => void;
   setEmail: (email: string) => void;
   setPhoneNumber: (phoneNumber: string) => void;
   setIncome: (income: string) => void;  
-  setCurrentPageIndex: (page: number) => void;  
-  setIsNextButtonDisabled: (disabled: boolean) => void;
+  setCurrentPageIndex: (page: number) => void;
+  setNameValid: (valid: boolean) => void;
+  setEmailValid: (valid: boolean) => void;
+  setPhoneNumberValid: (valid: boolean) => void;
+  setIncomeValid: (valid: boolean) => void;
 };
 
 type OnboardingStoreState = {
@@ -29,14 +35,20 @@ export const useOnboardingStore = create(
       phoneNumber: "",
       income: "",
       currentPageIndex: 0,
-      isNextButtonDisabled: true,
+      nameValid: false,
+      emailValid: false,
+      phoneNumberValid: false,
+      incomeValid: false,
 
       setName: (name) => set({ name }),
       setEmail: (email) => set({ email }),
       setPhoneNumber: (phoneNumber) => set({ phoneNumber }),
       setIncome: (income) => set({ income }),
       setCurrentPageIndex: (currentPageIndex) => set({ currentPageIndex }),
-      setIsNextButtonDisabled: (isNextButtonDisabled) => set({ isNextButtonDisabled }),
+      setNameValid: (nameValid) => set({ nameValid }),
+      setEmailValid: (emailValid) => set({ emailValid }),
+      setPhoneNumberValid: (phoneNumberValid) => set({ phoneNumberValid }),
+      setIncomeValid: (incomeValid) => set({ incomeValid }),
     }),
     {
       name: "onboarding-storage",

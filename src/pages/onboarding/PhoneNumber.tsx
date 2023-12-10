@@ -3,7 +3,7 @@ import OnboardingNavigation from "../../components/OnboardingNavigation";
 import { useOnboardingStore } from "../../store";
 
 export default function PhoneNumber() {
-  const { phoneNumber, setPhoneNumber, isNextButtonDisabled, setIsNextButtonDisabled } = useOnboardingStore();
+  const { phoneNumber, setPhoneNumber, phoneNumberValid, setPhoneNumberValid} = useOnboardingStore();
 
   const validatePhoneNumber = (input: string): boolean => {
     return input.length >= 10;
@@ -15,7 +15,7 @@ export default function PhoneNumber() {
   };
 
   useEffect(() => {
-    setIsNextButtonDisabled(!validatePhoneNumber(phoneNumber));
+    setPhoneNumberValid(validatePhoneNumber(phoneNumber));
   }, [phoneNumber]);
 
   return (
@@ -34,7 +34,7 @@ export default function PhoneNumber() {
             focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6"
           onChange={handleInputChange}
         />
-        {isNextButtonDisabled && phoneNumber && (
+        {!phoneNumberValid && phoneNumber && (
           <div className="absolute mt-2 text-sm text-red-500">
             Please enter a valid phone number.
           </div>
@@ -43,7 +43,7 @@ export default function PhoneNumber() {
 
       <OnboardingNavigation
         className="hidden md:flex"
-        disabled={isNextButtonDisabled}
+        disabled={!phoneNumberValid}
       />
     </div>
   );

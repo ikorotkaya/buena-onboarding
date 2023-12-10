@@ -10,7 +10,7 @@ export default function Sidebar() {
   const isStepChecked = (stepIndex: number) => {
     const step = ONBOARDING_PAGES[stepIndex];
 
-    return step.storeKey && !!onboardingStore[step.storeKey];
+    return step.storeKey && onboardingStore[step.storeKey];
   };
 
   const isStepActive = (stepIndex: number) => {

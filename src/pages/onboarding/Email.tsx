@@ -3,7 +3,12 @@ import OnboardingNavigation from "../../components/OnboardingNavigation";
 import { useOnboardingStore } from "../../store";
 
 export default function Email() {
-  const { email, setEmail, isNextButtonDisabled, setIsNextButtonDisabled  } = useOnboardingStore();
+  const {
+    email,
+    setEmail,
+    emailValid,
+    setEmailValid,
+  } = useOnboardingStore();
 
   const validateEmail = (input: string) => {
     const emailRegex = /^[a-zA-Z0-9/]+@[a-zA-Z0-9/]+\.[a-zA-Z0-9/]+$/;
@@ -14,11 +19,8 @@ export default function Email() {
     const newEmail = e.target.value;
     setEmail(newEmail);
   };
-  
   useEffect(() => {
-    setIsNextButtonDisabled(!validateEmail(email));
-
-
+    setEmailValid(validateEmail(email));
   }, [email]);
 
   return (
@@ -35,18 +37,18 @@ export default function Email() {
           className="block w-full rounded-md border-0 px-4 py-1.5 text-gray-900 
             shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 
             focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6"
-            onChange={handleEmailChange}
+          onChange={handleEmailChange}
         />
-        {isNextButtonDisabled && email && (
+        {!emailValid && email && (
           <div className="absolute mt-2 text-sm text-red-500">
             Please enter a valid email address.
           </div>
         )}
       </div>
-      
-      <OnboardingNavigation 
-        className="hidden md:flex" 
-        disabled={isNextButtonDisabled}
+
+      <OnboardingNavigation
+        className="hidden md:flex"
+        disabled={!emailValid}
       />
     </div>
   );

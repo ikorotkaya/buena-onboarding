@@ -1,5 +1,5 @@
 import { useOnboardingStore } from "../../store";
-import SubmitButton from "../../components/Submitbutton";
+import SubmitButton from "../../components/SubmitButton";
 
 export default function Summary() {
   const { name, email, phoneNumber, income } = useOnboardingStore();

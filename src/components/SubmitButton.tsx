@@ -2,9 +2,9 @@ import { useOnboardingStore } from "../store";
 import { Link } from "react-router-dom";
 
 export default function SubmitButton() {
-  const { name, email, phoneNumber, income } = useOnboardingStore();
+  const { nameValid, emailValid, phoneNumberValid, incomeValid } = useOnboardingStore();
 
-  const buttonEnabled = name && email && phoneNumber && income;
+  const buttonEnabled = nameValid && emailValid && phoneNumberValid && incomeValid;
 
   return (
     <>

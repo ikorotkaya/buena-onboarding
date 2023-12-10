@@ -11,16 +11,15 @@ const incomeRanges = [
 ];
 
 export default function Income() {
-  const { income, setIncome, isNextButtonDisabled, setIsNextButtonDisabled } = useOnboardingStore();
+  const { income, setIncome, incomeValid, setIncomeValid} = useOnboardingStore();
 
   const handleIncomeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newIncome = e.target.value;
     setIncome(newIncome);
-
   }
   
   useEffect(() => {
-    setIsNextButtonDisabled(income === "");
+    setIncomeValid(income !== "");
   }, [income]);
 
   return (
@@ -53,7 +52,7 @@ export default function Income() {
 
       <OnboardingNavigation
         className="hidden md:flex"
-        disabled={isNextButtonDisabled} 
+        disabled={!incomeValid} 
       />
     </div>
   );

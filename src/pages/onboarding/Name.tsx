@@ -3,7 +3,12 @@ import OnboardingNavigation from "../../components/OnboardingNavigation";
 import { useOnboardingStore } from "../../store";
 
 export default function Name() {
-  const { name, setName, isNextButtonDisabled, setIsNextButtonDisabled  } = useOnboardingStore();
+  const {
+    name,
+    setName,
+    nameValid,
+    setNameValid,
+  } = useOnboardingStore();
 
   const validateName = (input: string) => {
     return input.length >= 1;
@@ -13,9 +18,9 @@ export default function Name() {
     const newName = e.target.value;
     setName(newName);
   };
-  
+
   useEffect(() => {
-    setIsNextButtonDisabled(!validateName(name));
+    setNameValid(validateName(name));
   }, [name]);
 
   return (
@@ -34,7 +39,7 @@ export default function Name() {
             focus:ring-2 focus:ring-inset focus:ring-black sm:text-sm sm:leading-6"
           onChange={handleInputChange}
         />
-        {isNextButtonDisabled && name && (
+        {!nameValid && name && (
           <div className="absolute mt-2 text-sm text-red-500">
             Please enter a valid name.
           </div>
@@ -43,7 +48,7 @@ export default function Name() {
 
       <OnboardingNavigation
         className="hidden md:flex"
-        disabled={isNextButtonDisabled}
+        disabled={!nameValid}
       />
     </div>
   );
