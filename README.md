@@ -22,6 +22,14 @@
 7. E2E tests with Cypress. I've added a few tests to check if the onboarding flow works as expected. Again, I'll add more tests soon.
 8. Surprise feature. 🎁 Try the onboarding flow and reach the end: https://buena-onboarding.netlify.app/
 
+## How to add a new onboarding page
+
+The onboarding was built with flexibility in mind. All components are decoupled from the notion of a specific onboarding page as possible. 
+
+The order of pages is configured via the [`onboarding-pages.json`](https://github.com/ikorotkaya/onboarding-spa/blob/main/onboarding-pages.json) config file.
+
+Check out the [design notes](design_notes/2_add_new_onboarding_page.md) for more details.
+
 ## Development 
 
 ### Installation
