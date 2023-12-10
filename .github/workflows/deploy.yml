@@ -44,11 +44,13 @@ jobs:
       run: npm run build
 
   deploy:
+    needs: build
     name: Deploy to Netlify
     runs-on: ubuntu-latest
     environment: netlify
     steps:
     - uses: jsmrcaga/action-netlify-deploy@v2.0.0
       with:
+        build_directory: dist
         NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
         NETLIFY_DEPLOY_TO_PROD: true
