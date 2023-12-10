@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import ONBOARDING_PAGES from "../../onboarding-pages.json";
 import { useOnboardingStore } from "../store";
-import logo from "../assets/logo.svg";
+import logo from "../icons/logo.svg";
 
 export default function Sidebar() {
   const { currentPageIndex } = useOnboardingStore();
@@ -26,7 +26,7 @@ export default function Sidebar() {
     <div className="h-screen bg-slate-300 hidden md:block">
       <div className="px-8 py-4 mb-36">
         <Link to="/">
-          <img className="w-16" src={logo} alt="Buena" />
+          <img src={logo} alt="Buena" className="w-16" />
         </Link>
       </div>
 
