@@ -1,6 +1,6 @@
 # Sidebar in Web Version
 
-The Sidebar on the web version helps users during onboarding by showing progress and input readiness.
+The Sidebar on the web version helps users during onboarding by showing progress and input validity.
 
 ## Functionality
 
