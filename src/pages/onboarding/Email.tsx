@@ -40,7 +40,9 @@ export default function Email() {
           onChange={handleEmailChange}
         />
         {!emailValid && email && (
-          <div className="absolute mt-2 text-sm text-red-500">
+          <div 
+            data-testid="input-error"
+            className="absolute mt-2 text-sm text-red-500">
             Please enter a valid email address.
           </div>
         )}

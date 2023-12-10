@@ -11,7 +11,7 @@ export default function Name() {
   } = useOnboardingStore();
 
   const validateName = (input: string) => {
-    return input.length >= 1;
+    return input.length >= 2;
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,7 +40,9 @@ export default function Name() {
           onChange={handleInputChange}
         />
         {!nameValid && name && (
-          <div className="absolute mt-2 text-sm text-red-500">
+          <div 
+            data-testid="input-error"
+            className="absolute mt-2 text-sm text-red-500">
             Please enter a valid name.
           </div>
         )}

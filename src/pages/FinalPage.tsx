@@ -21,11 +21,13 @@ export default function FinalPage() {
       <Confetti width={windowSize.width} height={windowSize.height} />
       
       <h2 className="flex items-end justify-center text-3xl font-bold text-gray-900 sm:text-4xl">
-        Thank you for submitting your application!
+        Thank you for your submission!
       </h2>
 
-      <div className="flex justify-center text-lg text-gray-600">
-        We will contact you shortly to discuss the next steps.
+      <div 
+        data-testid="submission-confirmation"
+        className="flex justify-center text-lg text-gray-600">
+        We will be in touch shortly.
       </div>
     </div>
   );

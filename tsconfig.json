@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    "module": "es2015",
     "skipLibCheck": true,
     "esModuleInterop": true,
 
@@ -23,6 +24,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src/**/**.*"],
+  "include": [
+    "./src/**/**.*",
+    "cypress/**/*.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

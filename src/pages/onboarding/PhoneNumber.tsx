@@ -35,7 +35,9 @@ export default function PhoneNumber() {
           onChange={handleInputChange}
         />
         {!phoneNumberValid && phoneNumber && (
-          <div className="absolute mt-2 text-sm text-red-500">
+          <div 
+            data-testid="input-error"
+            className="absolute mt-2 text-sm text-red-500">
             Please enter a valid phone number.
           </div>
         )}

@@ -10,8 +10,11 @@ export default function Summary() {
         Check your info:
       </h2>
 
-      <div className="mb-4 grid grid-cols-2 gap-3">
-        <div className="">
+      <div 
+        data-testid="summary"
+        className="mb-4 grid grid-cols-2 gap-3"
+      >
+        <div>
           <div>Full Name:</div>
           <div>Email:</div>
           <div>Phone Number:</div>
