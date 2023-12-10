@@ -3,6 +3,7 @@ import { pages } from "../utils/onboarding-routing";
 import { useOnboardingStore } from "../store";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { useState, useEffect } from "react";
+import logo from "../icons/logo.svg";
 
 export default function OnboardingNavbar({ className = ""}: { className?: string}) {
   const { currentPageIndex } = useOnboardingStore();
@@ -17,7 +18,7 @@ export default function OnboardingNavbar({ className = ""}: { className?: string
       <div>
         <Link
           to="/">
-          <img src="/logo.svg" alt="Buena" />
+          <img src={logo} alt="Buena" />
         </Link>
       </div>
 
