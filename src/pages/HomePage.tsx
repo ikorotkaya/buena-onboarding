@@ -7,11 +7,11 @@ export default function HomePage() {
         Welcome to Buena
       </h2>
 
-      <div className="flex justify-center text-lg leading-8 text-gray-600">
+      <div className="subheadline flex justify-center text-lg leading-8 text-gray-600">
         Enter your personal details and start your journey today.
       </div>
 
-      <div className="flex flex-row justify-center items-end pb-4">
+      <div className="get-started-button flex flex-row justify-center items-end pb-4">
         <GetStartedButton />
       </div>
     </div>
