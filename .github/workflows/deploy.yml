@@ -17,14 +17,11 @@ jobs:
     - name: Check out your repository using git
       uses: actions/checkout@v3
 
-    - name: Use Node.js 20
+    - name: Setup Node
       uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-        cache: 'npm'
 
     - name: Install dependencies
-      run: npm install
+      uses: bahmutov/npm-install@v1
 
     - name: Run specs
       run: npm run test
@@ -39,14 +36,11 @@ jobs:
     - name: Check out repo
       uses: actions/checkout@v3
 
-    - name: Use Node.js 20
+    - name: Setup Node
       uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-        cache: 'npm'
 
     - name: Install dependencies
-      run: npm install
+      uses: bahmutov/npm-install@v1
 
     - name: Build project
       run: npm run build
