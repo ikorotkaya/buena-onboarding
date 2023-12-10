@@ -43,19 +43,12 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
-      with:
-        name: github-pages
-        path: ./dist
-
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    name: Deploy to Netlify
     runs-on: ubuntu-latest
-    needs: build
+    environment: netlify
     steps:
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v3
+    - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+      with:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
+        NETLIFY_DEPLOY_TO_PROD: true
