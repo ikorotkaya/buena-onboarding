@@ -1,6 +1,8 @@
 # Onboarding flow
 
-This project is a test task for Buena. It's a React SPA that implements an onboarding flow. Live demo: https://buena-onboarding.netlify.app/
+This project is a test task for Buena. It's a React SPA that implements an onboarding flow. 
+
+🔗 Live demo: https://buena-onboarding.netlify.app/
 
 ## Technologies used
 
