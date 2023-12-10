@@ -35,8 +35,8 @@ Check out the [design notes](design_notes/2_add_new_onboarding_page.md) for more
 Of course, I was short on time and haven't done everything I wanted to do. Here's the list of things I'd like to add/improve:
 
 - [x] Make submit button page-agnostic 
+- [x] Create static page to handle page refresh ([Netlify redirects config](https://docs.netlify.com/routing/redirects/rewrites-proxies/#shadowing))
 - [ ] Make mobile "Next" button page-agnostic
-- [ ] Create static page to handle page refresh
 - [ ] Introduce a design system and align look and feel of all components (Storybook)
 - [ ] Add more animations and transitions
 - [ ] Add i18n support (I bet we'll have DE and EN speaking users) 
