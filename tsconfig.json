@@ -8,8 +8,6 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
 
-    "types": ["jest"],
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
