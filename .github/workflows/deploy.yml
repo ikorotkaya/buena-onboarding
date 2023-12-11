@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   specs:
+    name: Specs
     runs-on: ubuntu-latest
     steps:
     - name: Check out your repository using git
@@ -27,6 +28,7 @@ jobs:
       run: npm run test
 
   linting:
+    name: Linting
     runs-on: ubuntu-latest
     steps:
     - name: Check out your repository using git
