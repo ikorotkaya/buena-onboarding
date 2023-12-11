@@ -16,7 +16,7 @@ export default function Name() {
 
   useEffect(() => {
     setNameValid(validateName(name));
-  }, [name]);
+  }, [name]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">

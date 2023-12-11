@@ -16,7 +16,7 @@ export default function Email() {
   };
   useEffect(() => {
     setEmailValid(validateEmail(email));
-  }, [email]);
+  }, [email]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">

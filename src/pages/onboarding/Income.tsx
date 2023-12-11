@@ -21,7 +21,7 @@ export default function Income() {
 
   useEffect(() => {
     setIncomeValid(income !== "");
-  }, [income]);
+  }, [income]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">

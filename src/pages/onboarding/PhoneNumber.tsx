@@ -17,7 +17,7 @@ export default function PhoneNumber() {
 
   useEffect(() => {
     setPhoneNumberValid(validatePhoneNumber(phoneNumber));
-  }, [phoneNumber]);
+  }, [phoneNumber]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
