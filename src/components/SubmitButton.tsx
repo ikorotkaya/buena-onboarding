@@ -14,7 +14,7 @@ export default function SubmitButton() {
         to="/final-page"
         data-testid="submit-button"
         className={`relative w-full inline-flex items-center 
-          justify-center p-4 px-6 py-3 overflow-hidden font-medium 
+          justify-center px-6 py-3 overflow-hidden font-medium 
           transition duration-300 ease-out bg-cyan-500 text-white 
           rounded-md group 
           ${buttonEnabled ? "cursor-pointer " : "bg-neutral-400 pointer-events-none"}`}
