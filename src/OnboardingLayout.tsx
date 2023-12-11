@@ -38,7 +38,7 @@ export default function OnboardingLayout() {
       <main className="">
         <Navbar className="px-8 py-7 fixed top-0 left-0 md:hidden" />
 
-        <div className="px-16">
+        <div className="px-0 md:px-16">
           <Outlet />
         </div>
 
