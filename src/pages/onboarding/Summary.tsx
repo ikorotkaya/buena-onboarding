@@ -1,14 +1,13 @@
 import { useOnboardingStore } from "../../store";
 import SubmitButton from "../../components/SubmitButton";
+import Headline from "../../components/Headline";
 
 export default function Summary() {
   const { name, email, phoneNumber, income } = useOnboardingStore();
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
-      <h2 className="block mb-8 text-3xl font-bold text-stone-900 sm:text-4xl">
-        Check your info:
-      </h2>
+      <Headline type="2">Check your info:</Headline>
 
       <div
         data-testid="summary"

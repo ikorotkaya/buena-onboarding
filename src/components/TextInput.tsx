@@ -3,7 +3,7 @@ interface TextInputProps {
   type?: string;
   defaultValue?: string;
   onChange: (value: string) => void;
-}
+};
 
 export default function TextInput({
   onChange,

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { pages } from "../utils/onboarding-routing";
 import { useOnboardingStore } from "../store";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import SecondaryButton from "./SecondaryButton";
 import { useState, useEffect } from "react";
 import logo from "../icons/logo.svg";
 
@@ -27,13 +27,7 @@ export default function OnboardingNavbar({
 
       <div className="flex items-center ">
         {currentPageIndex > 0 && (
-          <Link
-            to={`/onboarding/${previousPage}`}
-            className="flex text-sm items-center px-4 py-1 mr-6 border rounded-full"
-          >
-            <ArrowLeftIcon className="w-4 mr-2" />
-            Back
-          </Link>
+          <SecondaryButton link={`/onboarding/${previousPage}`} />
         )}
 
         <div className="leading-none text-neutral-500">
