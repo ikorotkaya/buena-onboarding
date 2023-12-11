@@ -30,7 +30,7 @@ export default function OnboardingLayout() {
   }, [currentPageIndex, nameValid, emailValid, phoneNumberValid, incomeValid]);
 
   return (
-    <div className="grid col-auto	p-8 md:p-0 md:grid-cols-[1fr,2fr] md:gap-4 md:h-screen">
+    <div className="grid col-auto	p-8 md:p-0 md:grid-cols-[1fr,2fr] md:h-screen">
       <aside className="hidden md:block">
         <Sidebar />
       </aside>
@@ -38,7 +38,9 @@ export default function OnboardingLayout() {
       <main className="">
         <Navbar className="px-8 py-7 fixed top-0 left-0 md:hidden" />
 
-        <Outlet />
+        <div className="px-16">
+          <Outlet />
+        </div>
 
         <OnboardingNavigation
           disabled={isNextButtonDisabled}

@@ -23,7 +23,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="h-screen bg-stone-300 hidden md:block">
+    <div className="h-screen bg-sky-100	 hidden md:block">
       <div className="mb-32">
         <Navbar />
       </div>

@@ -25,11 +25,8 @@ export default function OnboardingNavigation({
         <Link
           to={`/onboarding/${nextPage}`}
           data-testid="next-button"
-          className={`w-full md:w-auto flex md:ml-auto items-center justify-center px-4 py-2 text-base font-medium whitespace-no-wrap 
-          border-2 rounded
-          ${disabled ? 
-            'bg-neutral-400 text-neutral-500 border-neutral-400 pointer-events-none' 
-            : 'bg-neutral-900 text-white md:hover:text-cyan-500 border-neutral-900 focus:outline-none'}`}
+          className={`w-full md:w-auto flex md:ml-auto items-center justify-center px-4 py-2 text-base font-medium whitespace-no-wrap text-white rounded
+          ${disabled ? 'bg-neutral-400 pointer-events-none' : 'bg-neutral-900  md:hover:bg-neutral-700 focus:outline-none'}`}
         >
           Next
           <svg
