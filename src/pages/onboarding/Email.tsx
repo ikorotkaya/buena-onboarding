@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import OnboardingNavigation from "../../components/OnboardingNavigation";
+import NextButton from "../../components/NextButton";
 import { useOnboardingStore } from "../../store";
 
 export default function Email() {
@@ -44,7 +44,7 @@ export default function Email() {
         )}
       </div>
 
-      <OnboardingNavigation className="hidden md:flex" disabled={!emailValid} />
+      <NextButton className="hidden md:flex" disabled={!emailValid} />
     </div>
   );
 }

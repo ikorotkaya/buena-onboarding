@@ -3,15 +3,15 @@ import { pages } from "../utils/onboarding-routing";
 import { useEffect, useState } from "react";
 import { useOnboardingStore } from "../store";
 
-type OnboardingNavigationProps = {
+type NextButtonProps = {
   className?: string;
   disabled: boolean;
 };
 
-export default function OnboardingNavigation({
+export default function NextButton({
   className = "",
   disabled
-}: OnboardingNavigationProps) {
+}: NextButtonProps) {
   const { currentPageIndex } = useOnboardingStore();
   const [nextPage, setNextPage] = useState(pages[currentPageIndex + 1]);
 

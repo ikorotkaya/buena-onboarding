@@ -47,4 +47,4 @@ Replace "newName" with the slug specified in the `onboarding-pages.json` file an
 
 ## 5. Implement Logic in Page and Navigation
 
-In the newly created page file (`NewName.tsx`), implement the logic necessary for the onboarding step. Additionally, update the `OnboardingNavigation` component to reflect the new onboarding step and handle navigation accordingly.
+In the newly created page file (`NewName.tsx`), implement the logic necessary for the onboarding step. Additionally, update the `NextButton` component to reflect the new onboarding step and handle navigation accordingly.

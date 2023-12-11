@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/OnboardingNavbar";
-import OnboardingNavigation from "./components/OnboardingNavigation";
+import NextButton from "./components/NextButton";
 import { useOnboardingStore } from "./store";
 import { useEffect } from "react";
 import ONBOARDING_PAGES from "../onboarding-pages.json";
@@ -38,7 +38,7 @@ export default function OnboardingLayout() {
           <Outlet />
         </div>
 
-        <OnboardingNavigation
+        <NextButton
           disabled={isNextButtonDisabled}
           className="fixed bottom-0 left-0 md:hidden"
         />
