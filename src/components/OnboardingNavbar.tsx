@@ -18,7 +18,11 @@ export default function OnboardingNavbar({ className = ""}: { className?: string
       <div>
         <Link
           to="/">
-          <img src={logo} alt="Buena" />
+            <img 
+              className="w-14" 
+              src={logo} 
+              alt="Buena" 
+            />
         </Link>
       </div>
 
