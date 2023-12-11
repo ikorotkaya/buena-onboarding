@@ -6,7 +6,7 @@ The `onboarding-pages.json` file configures the onboarding flow.
 
 Each entry in the file defines an onboarding page with:
 
-- **Name:** Descriptive title (e.g., "Email", "Phone number"), shown in the sidebar on desktop.
+- **Name:** Descriptive title (e.g., "Email", "Phone number"), shown in the sidebar on the desktop.
 - **Slug:** Unique identifier for routing and referencing.
 - **StoreKey:** Manages data validity in the onboarding store. If `null`, the page doesn't impact the state.
 
