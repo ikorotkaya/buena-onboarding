@@ -26,8 +26,23 @@ jobs:
     - name: Run specs
       run: npm run test
 
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out your repository using git
+      uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+
+    - name: Install dependencies
+      uses: bahmutov/npm-install@v1
+
+    - name: Run linters
+      run: npm run lint
+
   deploy:
-    needs: specs
+    needs: [specs, linting]
     name: Deploy to Netlify
     runs-on: ubuntu-latest
     environment: netlify
