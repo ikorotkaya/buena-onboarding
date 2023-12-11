@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
-type OnboardingStore = {
+export type OnboardingStore = {
   name: string;
   email: string;
   phoneNumber: string;

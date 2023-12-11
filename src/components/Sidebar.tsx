@@ -3,6 +3,7 @@ import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import ONBOARDING_PAGES from "../../onboarding-pages.json";
 import { useOnboardingStore } from "../store";
 import Navbar from "./Navbar";
+import type { OnboardingStore } from "../store";
 
 export default function Sidebar() {
   const { currentPageIndex } = useOnboardingStore();
@@ -10,8 +11,9 @@ export default function Sidebar() {
 
   const isStepChecked = (stepIndex: number) => {
     const step = ONBOARDING_PAGES[stepIndex];
+    const storeKey = step.storeKey as keyof OnboardingStore;
 
-    return step.storeKey && onboardingStore[step.storeKey];
+    return storeKey && onboardingStore[storeKey];
   };
 
   const isStepActive = (stepIndex: number) => {
