@@ -23,8 +23,8 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="h-screen bg-slate-300 hidden md:block">
-      <div className="px-8 py-4 mb-36">
+    <div className="h-screen bg-stone-300 hidden md:block">
+      <div className="px-8 py-4 mb-32">
         <Link to="/">
           <img src={logo} alt="Buena" className="w-16" />
         </Link>
@@ -45,10 +45,10 @@ export default function Sidebar() {
                       className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center"
                       aria-hidden="true"
                     >
-                      <span className="absolute h-4 w-4 rounded-full bg-indigo-300" />
-                      <span className="relative block h-2 w-2 rounded-full bg-indigo-600" />
+                      <span className="absolute h-4 w-4 rounded-full bg-cyan-300/50" />
+                      <span className="relative block h-2 w-2 rounded-full bg-cyan-600" />
                     </span>
-                    <span className="ml-3 text-sm font-medium text-indigo-600">
+                    <span className="ml-3 text-sm font-medium text-cyan-600">
                       {step.name}
                     </span>
                   </Link>
@@ -59,14 +59,14 @@ export default function Sidebar() {
                     <span className="flex items-start">
                       <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center">
                         <CheckCircleIcon
-                          className={`h-full w-full text-indigo-600`}
+                          className={`h-full w-full text-cyan-600`}
                           aria-hidden="true"
                         />
                       </span>
                       <span
                         className={`ml-3 text-sm font-medium ${
                           isStepCurrent(index)
-                            ? "text-indigo-600"
+                            ? "text-cyan-600"
                             : "text-gray-500"
                         }`}
                       >

@@ -27,7 +27,9 @@ export default function OnboardingNavigation({
           data-testid="next-button"
           className={`w-full md:w-auto flex md:ml-auto items-center justify-center px-4 py-2 text-base font-medium whitespace-no-wrap 
           border-2 rounded
-          ${disabled ? 'bg-gray-400 text-gray-500 border-gray-400 pointer-events-none' : 'bg-indigo-700 text-white hover:text-indigo-300 border-indigo-700 focus:outline-none'}`}
+          ${disabled ? 
+            'bg-neutral-400 text-neutral-500 border-neutral-400 pointer-events-none' 
+            : 'bg-neutral-900 text-white hover:text-cyan-500 border-neutral-900 focus:outline-none'}`}
         >
           Next
           <svg

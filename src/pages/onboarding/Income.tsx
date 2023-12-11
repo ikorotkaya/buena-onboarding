@@ -23,8 +23,8 @@ export default function Income() {
   }, [income]);
 
   return (
-    <div className="flex flex-col pt-48 md:max-w-xl">
-      <h2 className="block mb-8 text-3xl font-bold text-gray-900 sm:text-4xl">
+    <div className="flex flex-col pt-52 md:max-w-xl">
+      <h2 className="block mb-8 text-3xl font-bold text-stone-900 sm:text-4xl">
         What is your income?
       </h2>
 
@@ -41,7 +41,7 @@ export default function Income() {
                 value={range.value}
                 checked={income === range.value}
                 onChange={handleIncomeChange}
-                className="h-4.5 w-4.5 mr-2 border-gray-300 text-bclack focus:ring-black cursor-pointer"
+                className="h-4 w-4 mr-2 checked:bg-cyan-500 checked:focus:bg-cyan-500 focus:ring-cyan-500 cursor-pointer"
               />
             
               {range.label}

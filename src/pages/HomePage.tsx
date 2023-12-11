@@ -3,7 +3,7 @@ import GetStartedButton from "../components/GetStartedButton";
 export default function HomePage() {
   return (
     <div className="grid grid-rows-[3fr,2fr,1fr]">
-      <h2 className="flex items-end justify-center text-4xl font-bold text-gray-900 sm:text-6xl mb-4">
+      <h2 className="flex items-end justify-center text-4xl font-bold text-stone-900 sm:text-6xl mb-4">
         Welcome to Buena
       </h2>
 

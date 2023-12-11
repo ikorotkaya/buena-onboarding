@@ -5,8 +5,8 @@ export default function Summary() {
   const { name, email, phoneNumber, income } = useOnboardingStore();
 
   return (
-    <div className="flex flex-col pt-48 md:max-w-xl">
-      <h2 className="block mb-8 text-3xl font-bold text-gray-900 sm:text-4xl">
+    <div className="flex flex-col pt-52 md:max-w-xl">
+      <h2 className="block mb-8 text-3xl font-bold text-stone-900 sm:text-4xl">
         Check your info:
       </h2>
 
