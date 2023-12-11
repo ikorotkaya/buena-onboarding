@@ -38,8 +38,7 @@ export default function NextButton({
           `}
         >
           Next
-          <ArrowRightIcon 
-            className="ml-2" />          
+          <ArrowRightIcon className="ml-2" />
         </Link>
       )}
     </div>

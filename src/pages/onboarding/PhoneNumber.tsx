@@ -45,10 +45,7 @@ export default function PhoneNumber() {
         )}
       </div>
 
-      <NextButton
-        className="hidden md:flex"
-        disabled={!phoneNumberValid}
-      />
+      <NextButton className="hidden md:flex" disabled={!phoneNumberValid} />
     </div>
   );
 }

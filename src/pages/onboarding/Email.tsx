@@ -32,7 +32,7 @@ export default function Email() {
           placeholder="you@example.com"
           onChange={handleEmailChange}
         />
-        
+
         {!emailValid && email && (
           <div
             data-testid="input-error"

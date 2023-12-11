@@ -1,6 +1,10 @@
-export default function ArrowRightIcon({ className = "" }: { className?: string }) {
+export default function ArrowRightIcon({
+  className = ""
+}: {
+  className?: string;
+}) {
   return (
-    <svg  
+    <svg
       className={`w-4 h-4 ${className}`}
       fill="none"
       stroke="currentColor"
@@ -14,5 +18,5 @@ export default function ArrowRightIcon({ className = "" }: { className?: string 
         d="M14 5l7 7m0 0l-7 7m7-7H3"
       ></path>
     </svg>
-  )
+  );
 }

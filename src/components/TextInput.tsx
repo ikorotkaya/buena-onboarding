@@ -1,11 +1,16 @@
 interface TextInputProps {
-  placeholder?: string
-  type?: string
-  defaultValue?: string,
-  onChange: (value: string) => void
+  placeholder?: string;
+  type?: string;
+  defaultValue?: string;
+  onChange: (value: string) => void;
 }
 
-export default function TextInput({ onChange, placeholder = "", type = "text", defaultValue = "" }: TextInputProps) {
+export default function TextInput({
+  onChange,
+  placeholder = "",
+  type = "text",
+  defaultValue = ""
+}: TextInputProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange(e.target.value);
   };
@@ -20,5 +25,5 @@ export default function TextInput({ onChange, placeholder = "", type = "text", d
         focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6"
       onChange={handleChange}
     />
-  )
+  );
 }

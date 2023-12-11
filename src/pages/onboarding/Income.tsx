@@ -51,10 +51,7 @@ export default function Income() {
         ))}
       </div>
 
-      <NextButton
-        className="hidden md:flex"
-        disabled={!incomeValid}
-      />
+      <NextButton className="hidden md:flex" disabled={!incomeValid} />
     </div>
   );
 }
