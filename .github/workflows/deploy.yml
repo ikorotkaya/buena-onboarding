@@ -11,8 +11,8 @@ permissions:
   id-token: write
 
 jobs:
-  specs:
-    name: Specs
+  unit_specs:
+    name: Jest specs
     runs-on: ubuntu-latest
     steps:
     - name: Check out your repository using git
@@ -26,6 +26,26 @@ jobs:
 
     - name: Run specs
       run: npm run test
+  
+  e2e_specs:
+    name: Cypress specs
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out your repository using git
+      uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+
+    - name: Install dependencies
+      uses: bahmutov/npm-install@v1
+
+    - name: Cypress run
+      uses: cypress-io/github-action@v6
+      with:
+        build: npm run build
+        start: npm start
+        browser: chrome
 
   linting:
     name: Linting
@@ -44,7 +64,7 @@ jobs:
       run: npm run lint
 
   deploy:
-    needs: [specs, linting]
+    needs: [unit_specs, e2e_specs, linting]
     name: Deploy to Netlify
     runs-on: ubuntu-latest
     environment: netlify
