@@ -3,12 +3,7 @@ import OnboardingNavigation from "../../components/OnboardingNavigation";
 import { useOnboardingStore } from "../../store";
 
 export default function Name() {
-  const {
-    name,
-    setName,
-    nameValid,
-    setNameValid,
-  } = useOnboardingStore();
+  const { name, setName, nameValid, setNameValid } = useOnboardingStore();
 
   const validateName = (input: string) => {
     return input.length >= 2;
@@ -40,18 +35,16 @@ export default function Name() {
           onChange={handleInputChange}
         />
         {!nameValid && name && (
-          <div 
+          <div
             data-testid="input-error"
-            className="absolute mt-2 text-sm text-red-500">
+            className="absolute mt-2 text-sm text-red-500"
+          >
             Please enter a valid name.
           </div>
         )}
       </div>
 
-      <OnboardingNavigation
-        className="hidden md:flex"
-        disabled={!nameValid}
-      />
+      <OnboardingNavigation className="hidden md:flex" disabled={!nameValid} />
     </div>
   );
 }

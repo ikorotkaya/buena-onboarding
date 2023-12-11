@@ -5,7 +5,11 @@ import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { useState, useEffect } from "react";
 import logo from "../icons/logo.svg";
 
-export default function OnboardingNavbar({ className = ""}: { className?: string}) {
+export default function OnboardingNavbar({
+  className = ""
+}: {
+  className?: string;
+}) {
   const { currentPageIndex } = useOnboardingStore();
   const [previousPage, setPreviousPage] = useState(pages[currentPageIndex - 1]);
 
@@ -14,30 +18,28 @@ export default function OnboardingNavbar({ className = ""}: { className?: string
   }, [currentPageIndex]);
 
   return (
-    <nav className={`flex w-full h-20 max-h-20 items-center justify-between ${className}`}>
-      <Link
-        className="grow-0"
-        to="/">
-          <img 
-            className="h-5 grow-0" 
-            src={logo} 
-            alt="Buena" 
-          />
+    <nav
+      className={`flex w-full h-20 max-h-20 items-center justify-between ${className}`}
+    >
+      <Link className="grow-0" to="/">
+        <img className="h-5 grow-0" src={logo} alt="Buena" />
       </Link>
 
       <div className="flex items-center ">
-        { currentPageIndex > 0 && (<Link
-          to={`/onboarding/${previousPage}`}
-          className="flex text-sm items-center px-4 py-1 mr-6 border rounded-full">
-          <ArrowLeftIcon
-            className="w-4 mr-2" />
-          Back
-        </Link>)}
+        {currentPageIndex > 0 && (
+          <Link
+            to={`/onboarding/${previousPage}`}
+            className="flex text-sm items-center px-4 py-1 mr-6 border rounded-full"
+          >
+            <ArrowLeftIcon className="w-4 mr-2" />
+            Back
+          </Link>
+        )}
 
         <div className="leading-none text-neutral-500">
-          { currentPageIndex + 1 } / { pages.length }  
+          {currentPageIndex + 1} / {pages.length}
         </div>
       </div>
     </nav>
-  )
+  );
 }

@@ -7,7 +7,10 @@ describe("Onboarding Flow", () => {
       "contain.text",
       "Enter your personal details and start your journey today."
     );
-    cy.get(`[data-testid="homepage-cta"]`).should("contain.text", "Get started");
+    cy.get(`[data-testid="homepage-cta"]`).should(
+      "contain.text",
+      "Get started"
+    );
     cy.get(`[data-testid="homepage-cta"]`).click();
 
     cy.url().should("eq", "http://localhost:5173/onboarding/name");

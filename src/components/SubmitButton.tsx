@@ -6,8 +6,12 @@ import type { OnboardingStore } from "../store";
 export default function SubmitButton() {
   const onboardingStore = useOnboardingStore();
 
-  const validityStoreKeys = ONBOARDING_PAGES.filter((step) => step.storeKey).map((step) => step.storeKey);
-  const buttonEnabled = validityStoreKeys.every((storeKey) => onboardingStore[storeKey as keyof OnboardingStore]);
+  const validityStoreKeys = ONBOARDING_PAGES.filter(
+    (step) => step.storeKey
+  ).map((step) => step.storeKey);
+  const buttonEnabled = validityStoreKeys.every(
+    (storeKey) => onboardingStore[storeKey as keyof OnboardingStore]
+  );
 
   return (
     <>
@@ -18,7 +22,11 @@ export default function SubmitButton() {
           justify-center px-6 py-3 overflow-hidden font-medium 
           transition duration-300 ease-out bg-cyan-500 text-white 
           rounded-md group 
-          ${buttonEnabled ? "cursor-pointer " : "bg-neutral-400 pointer-events-none"}`}
+          ${
+            buttonEnabled
+              ? "cursor-pointer "
+              : "bg-neutral-400 pointer-events-none"
+          }`}
       >
         <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-cyan-500 group-hover:translate-x-0 ease">
           <svg

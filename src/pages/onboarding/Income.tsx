@@ -7,17 +7,18 @@ const incomeRanges = [
   { value: "1000-2000", label: "1.000 - 2.000" },
   { value: "2000-3000", label: "2.000 - 3.000" },
   { value: "3000-4000", label: "3.000 - 4.000" },
-  { value: "4000-plus", label: "> 4.000" },
+  { value: "4000-plus", label: "> 4.000" }
 ];
 
 export default function Income() {
-  const { income, setIncome, incomeValid, setIncomeValid} = useOnboardingStore();
+  const { income, setIncome, incomeValid, setIncomeValid } =
+    useOnboardingStore();
 
   const handleIncomeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newIncome = e.target.value;
     setIncome(newIncome);
-  }
-  
+  };
+
   useEffect(() => {
     setIncomeValid(income !== "");
   }, [income]);
@@ -31,10 +32,10 @@ export default function Income() {
       <div className="space-y-4 mb-4">
         {incomeRanges.map((range, index) => (
           <div key={range.value} className="flex items-center">
-            <label 
+            <label
               htmlFor={`income-${index}`}
-              className="flex items-center text-sm leading-0 font-medium leading-6 cursor-pointer">
-              
+              className="flex items-center text-sm leading-0 font-medium leading-6 cursor-pointer"
+            >
               <input
                 type="radio"
                 id={`income-${index}`}
@@ -43,7 +44,7 @@ export default function Income() {
                 onChange={handleIncomeChange}
                 className="h-4 w-4 mr-2 checked:bg-cyan-500 checked:focus:bg-cyan-500 focus:ring-cyan-500 cursor-pointer"
               />
-            
+
               {range.label}
             </label>
           </div>
@@ -52,7 +53,7 @@ export default function Income() {
 
       <OnboardingNavigation
         className="hidden md:flex"
-        disabled={!incomeValid} 
+        disabled={!incomeValid}
       />
     </div>
   );

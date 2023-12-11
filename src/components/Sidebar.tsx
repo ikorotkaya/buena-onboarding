@@ -56,10 +56,11 @@ export default function Sidebar() {
                 )}
 
                 {isStepChecked(index) && (
-                  <Link 
-                    to={step.slug} 
+                  <Link
+                    to={step.slug}
                     className="group"
-                    data-testid="completed-step">
+                    data-testid="completed-step"
+                  >
                     <span className="flex items-start">
                       <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center">
                         <CheckCircleIcon
@@ -81,9 +82,7 @@ export default function Sidebar() {
                 )}
 
                 {!isStepActive(index) && !isStepChecked(index) && (
-                  <Link 
-                    data-testid="inactive-step"
-                    to={step.slug}>
+                  <Link data-testid="inactive-step" to={step.slug}>
                     <div className="flex items-start">
                       <div
                         className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center"

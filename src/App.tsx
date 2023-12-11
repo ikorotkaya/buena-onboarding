@@ -1,23 +1,23 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import Layout from './Layout';
-import OnboardingLayout from './OnboardingLayout';
-import Name from './pages/onboarding/Name';
-import Email from './pages/onboarding/Email';
-import PhoneNumber from './pages/onboarding/PhoneNumber';
-import Income from './pages/onboarding/Income';
-import Summary from './pages/onboarding/Summary';
-import HomePage from './pages/HomePage';
-import NoMatch from './pages/NoMatch';
-import FinalPage from './pages/FinalPage';
-import { useOnboardingStore } from './store';
-import { getCurrentPageIndex } from './utils/onboarding-routing';
-import { useEffect } from 'react';
+import Layout from "./Layout";
+import OnboardingLayout from "./OnboardingLayout";
+import Name from "./pages/onboarding/Name";
+import Email from "./pages/onboarding/Email";
+import PhoneNumber from "./pages/onboarding/PhoneNumber";
+import Income from "./pages/onboarding/Income";
+import Summary from "./pages/onboarding/Summary";
+import HomePage from "./pages/HomePage";
+import NoMatch from "./pages/NoMatch";
+import FinalPage from "./pages/FinalPage";
+import { useOnboardingStore } from "./store";
+import { getCurrentPageIndex } from "./utils/onboarding-routing";
+import { useEffect } from "react";
 
 function App() {
   const { setCurrentPageIndex } = useOnboardingStore();
   const location = useLocation();
 
-  useEffect (() => {
+  useEffect(() => {
     setCurrentPageIndex(getCurrentPageIndex());
   }, []);
 
@@ -41,11 +41,11 @@ function App() {
             <Route path="phone" element={<PhoneNumber />} />
             <Route path="income" element={<Income />} />
             <Route path="summary" element={<Summary />} />
-          </Route>          
+          </Route>
         </Route>
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

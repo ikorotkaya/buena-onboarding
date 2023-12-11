@@ -3,7 +3,8 @@ import OnboardingNavigation from "../../components/OnboardingNavigation";
 import { useOnboardingStore } from "../../store";
 
 export default function PhoneNumber() {
-  const { phoneNumber, setPhoneNumber, phoneNumberValid, setPhoneNumberValid} = useOnboardingStore();
+  const { phoneNumber, setPhoneNumber, phoneNumberValid, setPhoneNumberValid } =
+    useOnboardingStore();
 
   const validatePhoneNumber = (input: string): boolean => {
     return input.length >= 10;
@@ -35,9 +36,10 @@ export default function PhoneNumber() {
           onChange={handleInputChange}
         />
         {!phoneNumberValid && phoneNumber && (
-          <div 
+          <div
             data-testid="input-error"
-            className="absolute mt-2 text-sm text-red-500">
+            className="absolute mt-2 text-sm text-red-500"
+          >
             Please enter a valid phone number.
           </div>
         )}

@@ -24,7 +24,6 @@ export default function Summary() {
         <div className="px-4 py-2">{income}</div>
       </div>
 
-
       <div className="py-4 px-8 md:p-0 w-full fixed md:relative bottom-0 left-0">
         <SubmitButton />
       </div>

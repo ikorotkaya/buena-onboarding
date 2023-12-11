@@ -3,12 +3,7 @@ import OnboardingNavigation from "../../components/OnboardingNavigation";
 import { useOnboardingStore } from "../../store";
 
 export default function Email() {
-  const {
-    email,
-    setEmail,
-    emailValid,
-    setEmailValid,
-  } = useOnboardingStore();
+  const { email, setEmail, emailValid, setEmailValid } = useOnboardingStore();
 
   const validateEmail = (input: string) => {
     const emailRegex = /^[a-zA-Z0-9/]+@[a-zA-Z0-9/]+\.[a-zA-Z0-9/]+$/;
@@ -40,18 +35,16 @@ export default function Email() {
           onChange={handleEmailChange}
         />
         {!emailValid && email && (
-          <div 
+          <div
             data-testid="input-error"
-            className="absolute mt-2 text-sm text-red-500">
+            className="absolute mt-2 text-sm text-red-500"
+          >
             Please enter a valid email address.
           </div>
         )}
       </div>
 
-      <OnboardingNavigation
-        className="hidden md:flex"
-        disabled={!emailValid}
-      />
+      <OnboardingNavigation className="hidden md:flex" disabled={!emailValid} />
     </div>
   );
 }

@@ -15,7 +15,7 @@ export type OnboardingStore = {
   setName: (name: string) => void;
   setEmail: (email: string) => void;
   setPhoneNumber: (phoneNumber: string) => void;
-  setIncome: (income: string) => void;  
+  setIncome: (income: string) => void;
   setCurrentPageIndex: (page: number) => void;
   setNameValid: (valid: boolean) => void;
   setEmailValid: (valid: boolean) => void;
@@ -48,11 +48,11 @@ export const useOnboardingStore = create(
       setNameValid: (nameValid) => set({ nameValid }),
       setEmailValid: (emailValid) => set({ emailValid }),
       setPhoneNumberValid: (phoneNumberValid) => set({ phoneNumberValid }),
-      setIncomeValid: (incomeValid) => set({ incomeValid }),
+      setIncomeValid: (incomeValid) => set({ incomeValid })
     }),
     {
       name: "onboarding-storage",
-      storage: createJSONStorage(() => sessionStorage),
+      storage: createJSONStorage(() => sessionStorage)
     }
   )
 );

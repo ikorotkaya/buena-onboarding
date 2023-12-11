@@ -9,9 +9,7 @@ import { useState } from "react";
 import type { OnboardingStore } from "./store";
 
 export default function OnboardingLayout() {
-  const {
-    currentPageIndex
-  } = useOnboardingStore();
+  const { currentPageIndex } = useOnboardingStore();
 
   const onboardingStore = useOnboardingStore();
 
@@ -21,7 +19,8 @@ export default function OnboardingLayout() {
     const step = ONBOARDING_PAGES[currentPageIndex];
     if (step && step.storeKey) {
       setIsNextButtonDisabled(
-        !step.storeKey || !onboardingStore[step.storeKey as keyof OnboardingStore]
+        !step.storeKey ||
+          !onboardingStore[step.storeKey as keyof OnboardingStore]
       );
     }
   }, [currentPageIndex, onboardingStore]);
