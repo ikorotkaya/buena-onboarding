@@ -41,7 +41,7 @@ Of course, I was short on time and haven't done everything I wanted to do. Here'
 
 - [x] Make submit button page-agnostic 
 - [x] Create static page to handle page refresh ([Netlify redirects config](https://docs.netlify.com/routing/redirects/rewrites-proxies/#shadowing))
-- [ ] Make mobile "Next" button page-agnostic
+- [x] Make mobile "Next" button page-agnostic
 - [ ] Introduce a design system and align the look and feel of all components (Storybook)
 - [ ] Add more animations and transitions
 - [ ] Add i18n support (I bet we'll have DE and EN-speaking users) 

@@ -10,11 +10,7 @@ import type { OnboardingStore } from "./store";
 
 export default function OnboardingLayout() {
   const {
-    currentPageIndex,
-    nameValid,
-    emailValid,
-    phoneNumberValid,
-    incomeValid,
+    currentPageIndex
   } = useOnboardingStore();
 
   const onboardingStore = useOnboardingStore();
@@ -28,7 +24,7 @@ export default function OnboardingLayout() {
         !step.storeKey || !onboardingStore[step.storeKey as keyof OnboardingStore]
       );
     }
-  }, [currentPageIndex, nameValid, emailValid, phoneNumberValid, incomeValid]);
+  }, [currentPageIndex, onboardingStore]);
 
   return (
     <div className="grid col-auto	p-8 md:p-0 md:grid-cols-[1fr,2fr] md:h-screen">
