@@ -13,6 +13,8 @@ This project is a test task for Buena. It's a React SPA that implements an onboa
 * Tailwind CSS
 * Cypress
 * Jest
+* ESLint
+* Prettier
 * Github Actions for CI
 * Netlify for hosting
 
