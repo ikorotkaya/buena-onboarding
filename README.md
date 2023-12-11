@@ -26,7 +26,7 @@ This project is a test task for Buena. It's a React SPA that implements an onboa
 4. Onboarding checklist on desktop. I think for users it's very important to keep track of where they're in the onboarding and be able to easily navigate between steps. Open the website from your laptop to check out that awesome Sidebar component. Read more about it in [this design note](design_notes/4_sidebar_functionality.md). 
 5. To give users on mobile the same experience, I've added a progress bar at the top of the screen. Read more about it in [this design note](design_notes/5_mobile_navigation.md).
 6. Unit tests with Jest. I've simply followed positive/negative/edge case approach. Soon I'll add coverage support and more tests. In the meantime, you can check out the complete unit [test file for the Name onboarding screen](https://github.com/ikorotkaya/buena-onboarding/blob/main/src/pages/onboarding/Name.spec.tsx).
-7. E2E tests with Cypress. I've added a few tests to check if the onboarding flow works as expected. Again, I'll add more tests soon.
+7. E2E tests with Cypress. I've added a few tests to check if the onboarding flow works as expected. Again, I'll add more tests soon. Both unit and E2E tests are run on every push to the main branch via Github Actions. Take a look at [a sample build](https://github.com/ikorotkaya/buena-onboarding/actions/runs/7173746064). 🔥
 8. Surprise feature. 🎁 Try the onboarding flow and reach the end: https://buena-onboarding.netlify.app/
 
 ## How to add a new onboarding page
