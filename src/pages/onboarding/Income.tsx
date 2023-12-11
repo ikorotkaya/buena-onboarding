@@ -26,7 +26,7 @@ export default function Income() {
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
-      <Headline type="2">What is your income?</Headline>
+      <Headline style="3xl">What is your income?</Headline>
 
       <div className="space-y-4 mb-4">
         {incomeRanges.map((range, index) => (

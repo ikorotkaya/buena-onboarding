@@ -7,7 +7,7 @@ export default function Summary() {
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
-      <Headline type="2">Check your info:</Headline>
+      <Headline style="3xl">Check your info:</Headline>
 
       <div
         data-testid="summary"

@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <div className="grid grid-rows-[3fr,2fr,1fr]">
       <div className="flex items-end justify-center">
-        <Headline type="1">Welcome to Buena</Headline>
+        <Headline>Welcome to Buena</Headline>
       </div>
 
       <div className="subheadline flex justify-center text-center text-lg leading-8 text-stone-600">

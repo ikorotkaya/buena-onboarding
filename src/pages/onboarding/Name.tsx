@@ -22,7 +22,7 @@ export default function Name() {
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
-      <Headline type="2">What is your full name?</Headline>
+      <Headline style="3xl">What is your full name?</Headline>
 
       <div className="mb-4">
         <TextInput

@@ -21,7 +21,7 @@ export default function FinalPage() {
       <Confetti width={windowSize.width} height={windowSize.height} />
 
       <div className="flex items-end justify-center text-center">
-        <Headline type="1">Thank you for your submission!</Headline>
+        <Headline>Thank you for your submission!</Headline>
       </div>
 
       <div

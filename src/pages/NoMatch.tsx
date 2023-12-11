@@ -9,7 +9,7 @@ export default function NoMatch() {
       </div>
 
       <div className="flex items-end justify-center">
-        <Headline type="1">Page not found</Headline>
+        <Headline>Page not found</Headline>
       </div>
 
       <div className="flex justify-center text-center text-lg leading-8 text-stone-600 mb-6">
