@@ -6,7 +6,7 @@ const HEADLINE_STYLES = {
 const DEFAULT_TYPE_STYLES = {
   "1": "4xl",
   "2": "3xl"
-}
+};
 
 interface HeadlineProps {
   type?: "1" | "2";
@@ -23,11 +23,11 @@ export default function Headline({
 }: HeadlineProps) {
   const HeadingTag = `h${type}` as keyof JSX.IntrinsicElements;
 
-    
-  let cssClasses = HEADLINE_STYLES[DEFAULT_TYPE_STYLES[type] as keyof typeof HEADLINE_STYLES];
+  let cssClasses =
+    HEADLINE_STYLES[DEFAULT_TYPE_STYLES[type] as keyof typeof HEADLINE_STYLES];
 
   if (style) {
-    cssClasses = HEADLINE_STYLES[style]; 
+    cssClasses = HEADLINE_STYLES[style];
   }
 
   return (
