@@ -6,6 +6,7 @@ import { useOnboardingStore } from "./store";
 import { useEffect } from "react";
 import ONBOARDING_PAGES from "../onboarding-pages.json";
 import { useState } from "react";
+import type { OnboardingStore } from "./store";
 
 export default function OnboardingLayout() {
   const {
@@ -24,7 +25,7 @@ export default function OnboardingLayout() {
     const step = ONBOARDING_PAGES[currentPageIndex];
     if (step && step.storeKey) {
       setIsNextButtonDisabled(
-        !step.storeKey || !onboardingStore[step.storeKey]
+        !step.storeKey || !onboardingStore[step.storeKey as keyof OnboardingStore]
       );
     }
   }, [currentPageIndex, nameValid, emailValid, phoneNumberValid, incomeValid]);
