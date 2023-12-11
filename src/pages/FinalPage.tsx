@@ -26,7 +26,7 @@ export default function FinalPage() {
 
       <div 
         data-testid="submission-confirmation"
-        className="subheadline flex justify-center text-lg leading-8 text-stone-600">
+        className="flex justify-center text-lg leading-8 text-stone-600">
         We will be in touch shortly.
       </div>
     </div>

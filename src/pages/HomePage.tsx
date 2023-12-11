@@ -11,7 +11,9 @@ export default function HomePage() {
         Enter your personal details and start your journey today.
       </div>
 
-      <div className="get-started-button flex flex-row justify-center items-end pb-4">
+      <div 
+        data-testid="get-started-button"
+        className="flex flex-row justify-center items-end pb-4">
         <GetStartedButton />
       </div>
     </div>
