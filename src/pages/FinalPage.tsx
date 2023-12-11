@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Confetti from "react-confetti";
+import Headline from "../components/Headline";
 
 export default function FinalPage() {
   const [windowSize, setWindowSize] = useState({
@@ -19,9 +20,9 @@ export default function FinalPage() {
     <div className="grid grid-rows-[3fr,2fr] pt-36">
       <Confetti width={windowSize.width} height={windowSize.height} />
 
-      <h2 className="flex items-end justify-center text-center text-3xl font-bold text-stone-900 sm:text-5xl mb-4">
-        Thank you for your submission!
-      </h2>
+      <div className="flex items-end justify-center text-center">
+        <Headline type="1">Thank you for your submission!</Headline>
+      </div>
 
       <div
         data-testid="submission-confirmation"

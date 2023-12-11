@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Headline from "../components/Headline";
 
 export default function NoMatch() {
   return (
@@ -7,9 +8,9 @@ export default function NoMatch() {
         404
       </div>
 
-      <h2 className="flex items-end justify-center text-3xl font-bold text-stone-900 sm:text-5xl mb-4">
-        Page not found
-      </h2>
+      <div className="flex items-end justify-center">
+        <Headline type="1">Page not found</Headline>
+      </div>
 
       <div className="flex justify-center text-center text-lg leading-8 text-stone-600 mb-6">
         Sorry, we couldn't find the page you're looking for.
