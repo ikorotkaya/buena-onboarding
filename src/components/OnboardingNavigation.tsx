@@ -29,7 +29,7 @@ export default function OnboardingNavigation({
           border-2 rounded
           ${disabled ? 
             'bg-neutral-400 text-neutral-500 border-neutral-400 pointer-events-none' 
-            : 'bg-neutral-900 text-white hover:text-cyan-500 border-neutral-900 focus:outline-none'}`}
+            : 'bg-neutral-900 text-white md:hover:text-cyan-500 border-neutral-900 focus:outline-none'}`}
         >
           Next
           <svg

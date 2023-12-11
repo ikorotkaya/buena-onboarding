@@ -17,16 +17,16 @@ export default function FinalPage() {
   , []);
 
   return (
-    <div className="grid grid-rows-[3fr,2fr,1fr]">
+    <div className="grid grid-rows-[3fr,2fr] pt-36">
       <Confetti width={windowSize.width} height={windowSize.height} />
       
-      <h2 className="flex items-end justify-center text-3xl font-bold text-stone-900 sm:text-4xl">
+      <h2 className="flex items-end justify-center text-center text-3xl font-bold text-stone-900 sm:text-5xl mb-4">
         Thank you for your submission!
       </h2>
 
       <div 
         data-testid="submission-confirmation"
-        className="flex justify-center text-lg text-gray-600">
+        className="subheadline flex justify-center text-lg leading-8 text-stone-600">
         We will be in touch shortly.
       </div>
     </div>

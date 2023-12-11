@@ -7,7 +7,7 @@ export default function HomePage() {
         Welcome to Buena
       </h2>
 
-      <div className="subheadline flex justify-center text-lg leading-8 text-gray-600">
+      <div className="subheadline flex justify-center text-center text-lg leading-8 text-stone-600">
         Enter your personal details and start your journey today.
       </div>
 
