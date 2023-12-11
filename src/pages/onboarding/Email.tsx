@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import NextButton from "../../components/NextButton";
 import { useOnboardingStore } from "../../store";
+import TextInput from "../../components/TextInput";
 
 export default function Email() {
   const { email, setEmail, emailValid, setEmailValid } = useOnboardingStore();
@@ -10,10 +11,10 @@ export default function Email() {
     return emailRegex.test(input);
   };
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newEmail = e.target.value;
+  const handleEmailChange = (newEmail: string) => {
     setEmail(newEmail);
   };
+
   useEffect(() => {
     setEmailValid(validateEmail(email));
   }, [email]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -25,15 +26,13 @@ export default function Email() {
       </h2>
 
       <div className="mb-4">
-        <input
+        <TextInput
           defaultValue={email}
           type="email"
           placeholder="you@example.com"
-          className="block w-full rounded-md border-0 px-4 py-1.5 text-stone-900 
-            shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 
-            focus:ring-2 focus:ring-inset focus:ring-cyan-500 sm:text-sm sm:leading-6"
           onChange={handleEmailChange}
         />
+        
         {!emailValid && email && (
           <div
             data-testid="input-error"
