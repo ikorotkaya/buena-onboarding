@@ -28,7 +28,7 @@ export default function OnboardingNavbar({ className = ""}: { className?: string
       <div className="flex items-center ">
         { currentPageIndex > 0 && (<Link
           to={`/onboarding/${previousPage}`}
-          className="flex text-sm items-center px-4 mr-6 border rounded-full">
+          className="flex text-sm items-center px-4 py-1 mr-6 border rounded-full">
           <ArrowLeftIcon
             className="w-4 mr-2" />
           Back

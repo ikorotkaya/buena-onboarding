@@ -2,22 +2,31 @@ import { Link } from "react-router-dom";
 
 export default function NoMatch() {
   return (
-    <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 md:px-8">
-      <div className="text-center">
-        <div className="text-base font-semibold text-indigo-600">404</div>
-        
-        <h1 className="mt-4 text-3xl font-bold text-stone-900 sm:text-5xl">Page not found</h1>
-        
-        <div className="mt-6 text-base text-gray-600">Sorry, we couldn’t find the page you’re looking for.</div>
+    <main className="flex flex-col justify-center mt-24">
+      <div className="flex justify-center text-base font-semibold text-cyan-500 mb-6">
+        404
+      </div>
+      
+      <h2 className="flex items-end justify-center text-3xl font-bold text-stone-900 sm:text-5xl mb-4">
+        Page not found
+      </h2>
+      
+      <div className="flex justify-center text-center text-lg leading-8 text-stone-600 mb-6">
+        Sorry, we couldn't find the page you're looking for.
+      </div>
 
-        <div className="mt-10 flex items-center justify-center gap-x-6">
-          <Link
-            to="/"
-            className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Go back home
-          </Link>          
-        </div>
+      <div className="w-full md:w-auto fixed md:relative bottom-0 left-0 py-4 px-8 flex items-center justify-center 
+          md:px-6 text-base font-medium whitespace-no-wrap rounded-md text-center">
+        <Link
+          to="/"
+          className="relative w-full md:w-auto items-center 
+          justify-center px-6 py-3 overflow-hidden font-medium 
+          transition duration-300 ease-out md:hover:bg-neutral-700 
+          focus:outline-none bg-stone-900 text-white 
+          rounded-md"
+        >
+          Go back home
+        </Link>          
       </div>
     </main>
   );
