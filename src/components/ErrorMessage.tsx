@@ -1,6 +1,6 @@
 interface ErrorMessageProps {
   type: string;
-};
+}
 
 export default function ErrorMessage({ type }: ErrorMessageProps) {
   return (

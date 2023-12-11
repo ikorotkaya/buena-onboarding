@@ -3,7 +3,7 @@ import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 interface SecondaryButtonProps {
   link: string;
-};
+}
 
 export default function SecondaryButton({ link }: SecondaryButtonProps) {
   return (
