@@ -10,22 +10,18 @@ export default function Summary() {
         Check your info:
       </h2>
 
-      <div 
+      <div
         data-testid="summary"
-        className="mb-4 grid grid-cols-2 gap-3"
+        className="mb-4 grid grid-cols-[1fr,2fr] gap-1"
       >
-        <div>
-          <div>Full Name:</div>
-          <div>Email:</div>
-          <div>Phone Number:</div>
-          <div>Income:</div>
-        </div>
-        <div>
-          <div>{name}</div>
-          <div>{email}</div>
-          <div>{phoneNumber}</div>
-          <div>{income}</div>
-        </div>
+        <div>Name:</div>
+        <div>{name}</div>
+        <div>Email:</div>
+        <div>{email}</div>
+        <div>Phone Number:</div>
+        <div>{phoneNumber}</div>
+        <div>Income:</div>
+        <div>{income}</div>
       </div>
 
       <SubmitButton />

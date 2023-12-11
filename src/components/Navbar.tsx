@@ -3,16 +3,14 @@ import logo from "../icons/logo.svg";
 
 export default function Navbar() {
   return (
-    <nav className="px-8 py-4">
-      <div>
-        <Link
-          to="/">
-          <img 
-            className="w-16" 
-            src={logo} 
-            alt="Buena" />
-        </Link>
-      </div>
+    <nav className="flex items-center px-8 py-7 h-20 max-h-20">
+      <Link
+        to="/">
+        <img 
+          className="h-5" 
+          src={logo} 
+          alt="Buena" />
+      </Link>
     </nav>
   )
 }
