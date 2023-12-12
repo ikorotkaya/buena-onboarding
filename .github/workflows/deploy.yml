@@ -26,7 +26,12 @@ jobs:
 
     - name: Run specs
       run: npm run test
-  
+
+    - name: Upload coverage report
+      uses: ArtiomTr/jest-coverage-report-action@v2
+      with: 
+        coverage-file: coverage.json
+
   e2e_specs:
     name: Cypress specs
     runs-on: ubuntu-latest
