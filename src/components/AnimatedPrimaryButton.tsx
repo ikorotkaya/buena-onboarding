@@ -1,14 +1,26 @@
 import { Link } from "react-router-dom";
 
-export default function GetStartedButton() {
+interface AnimatedPrimaryButtonProps {
+  link: string;
+  textId: string;
+  buttonText: string;
+  className?: string;
+}
+
+export default function t({
+  link,
+  textId,
+  buttonText,
+  className = ""
+}: AnimatedPrimaryButtonProps) {
   return (
     <>
       <Link
-        to="/onboarding/name"
-        data-testid="homepage-cta"
-        className="relative w-full md:w-auto inline-flex items-center justify-center 
+        to={link}
+        data-testid={textId}
+        className={`relative w-full inline-flex items-center justify-center 
           px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out 
-          bg-cyan-500 rounded text-white group"
+          bg-cyan-500 rounded text-white group ${className}`}
       >
         <span
           className="absolute inset-0 flex items-center justify-center w-full h-full
@@ -33,9 +45,9 @@ export default function GetStartedButton() {
           className="absolute flex items-center justify-center w-full h-full 
           text-white transition-all duration-300 transform group-hover:translate-x-full ease"
         >
-          Get started
+          {buttonText}
         </span>
-        <span className="relative invisible">Get started</span>
+        <span className="relative invisible">{buttonText}</span>
       </Link>
     </>
   );

@@ -1,11 +1,12 @@
-import GetStartedButton from "../components/GetStartedButton";
 import Headline from "../components/Headline";
 import Subheadline from "../components/Subheadline";
+import AnimatedPrimaryButton from "../components/AnimatedPrimaryButton";
+import ONBOARDING_STEPS from "../../onboarding-pages.json";
 
 export default function HomePage() {
   return (
     <div className="grid grid-rows-[3fr,2fr,1fr] ">
-      <div className="flex items-end justify-center">
+      <div className="flex items-end justify-center text-center">
         <Headline>Welcome to Buena</Headline>
       </div>
 
@@ -13,11 +14,13 @@ export default function HomePage() {
         Enter your personal details and start your journey today.
       </Subheadline>
 
-      <div
-        data-testid="get-started-button"
-        className="flex flex-row justify-center items-end pb-4"
-      >
-        <GetStartedButton />
+      <div className="flex flex-row justify-center items-end pb-4">
+        <AnimatedPrimaryButton
+          link={`/onboarding/${ONBOARDING_STEPS[0].slug}`}
+          textId="homepage-cta"
+          buttonText="Get started"
+          className="md:w-auto"
+        />
       </div>
     </div>
   );

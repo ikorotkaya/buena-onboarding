@@ -1,6 +1,6 @@
 import { useOnboardingStore } from "../../store";
-import SubmitButton from "../../components/SubmitButton";
 import Headline from "../../components/Headline";
+import AnimatedPrimaryButton from "../../components/AnimatedPrimaryButton";
 
 export default function Summary() {
   const { name, email, phoneNumber, income } = useOnboardingStore();
@@ -24,7 +24,11 @@ export default function Summary() {
       </div>
 
       <div className="py-4 px-8 md:p-0 w-full fixed md:relative bottom-0 left-0">
-        <SubmitButton />
+        <AnimatedPrimaryButton
+          link="/final-page"
+          textId="submit-button"
+          buttonText="Submit"
+        />
       </div>
     </div>
   );
