@@ -8,7 +8,7 @@
     "build": "tsc && vite build && cp _redirects dist/_redirects",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "preview": "vite preview",
-    "test": "jest --coverage --outputFile=coverage.json",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"

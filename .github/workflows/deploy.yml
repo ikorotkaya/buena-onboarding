@@ -30,7 +30,7 @@ jobs:
     - name: Upload coverage report
       uses: ArtiomTr/jest-coverage-report-action@v2
       with: 
-        coverage-file: coverage.json
+        coverage-file: ./coverage/coverage-final.json
 
   e2e_specs:
     name: Cypress specs
