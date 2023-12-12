@@ -18,9 +18,10 @@ export default function HomePage() {
         <AnimatedPrimaryButton
           link={`/onboarding/${ONBOARDING_STEPS[0].slug}`}
           textId="homepage-cta"
-          buttonText="Get started"
           className="md:w-auto"
-        />
+        >
+          Get started
+        </AnimatedPrimaryButton>
       </div>
     </div>
   );

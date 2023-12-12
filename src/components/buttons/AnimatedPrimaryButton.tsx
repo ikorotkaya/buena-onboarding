@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 interface AnimatedPrimaryButtonProps {
   link: string;
   textId: string;
-  buttonText: string;
   className?: string;
   disabled?: boolean;
+  children: React.ReactNode;
 }
 
 export default function AnimatedPrimaryButton({
   link,
   textId,
-  buttonText,
   className = "",
-  disabled = false
+  disabled = false,
+  children
 }: AnimatedPrimaryButtonProps) {
   return (
     <>
@@ -50,9 +50,9 @@ export default function AnimatedPrimaryButton({
           className="absolute flex items-center justify-center w-full h-full 
           text-white transition-all duration-300 transform group-hover:translate-x-full ease"
         >
-          {buttonText}
+          {children}
         </span>
-        <span className="relative invisible">{buttonText}</span>
+        <span className="relative invisible">{children}</span>
       </Link>
     </>
   );

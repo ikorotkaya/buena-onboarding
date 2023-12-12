@@ -38,9 +38,10 @@ export default function Summary() {
         <AnimatedPrimaryButton
           link="/final-page"
           textId="submit-button"
-          buttonText="Submit"
           disabled={!buttonEnabled}
-        />
+        >
+          Submit
+        </AnimatedPrimaryButton>
       </div>
     </div>
   );
