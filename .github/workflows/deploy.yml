@@ -27,6 +27,12 @@ jobs:
     - name: Run specs
       run: npm run test
 
+    - name: Debugging Info
+      run: |
+        ls -al
+        cat ./coverage-report.json
+        env
+
     - name: Upload coverage report
       uses: ArtiomTr/jest-coverage-report-action@v2
       with: 
