@@ -9,6 +9,8 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  checks: write
+  pull-requests: write
 
 jobs:
   unit_specs:
