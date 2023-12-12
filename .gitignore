@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 coverage
-coverage.json
+coverage-report.json
 
 # Editor directories and files
 .vscode/*
