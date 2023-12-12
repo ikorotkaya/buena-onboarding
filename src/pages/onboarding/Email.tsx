@@ -33,7 +33,7 @@ export default function Email() {
           onChange={handleEmailChange}
         />
 
-        {!emailValid && email && <ErrorMessage type="email adress" />}
+        {!emailValid && email && <ErrorMessage type="email address" />}
       </div>
 
       <NextButton className="hidden md:flex" disabled={!emailValid} />
