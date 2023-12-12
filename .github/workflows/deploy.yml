@@ -3,7 +3,9 @@ name: Deploy (GitHub Pages)
 
 on:
   push:
-    branches: [ main ]
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -28,12 +30,6 @@ jobs:
 
     - name: Run specs
       run: npm run test
-
-    - name: Debugging Info
-      run: |
-        ls -al
-        cat ./coverage-report.json
-        env
 
     - name: Upload coverage report
       uses: ArtiomTr/jest-coverage-report-action@v2
@@ -80,6 +76,7 @@ jobs:
 
   deploy:
     needs: [unit_specs, e2e_specs, linting]
+    if: github.ref == 'refs/heads/main'
     name: Deploy to Netlify
     runs-on: ubuntu-latest
     environment: netlify
