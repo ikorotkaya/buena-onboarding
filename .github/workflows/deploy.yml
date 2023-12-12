@@ -9,7 +9,6 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  pull-requests: write
 
 jobs:
   unit_specs:
@@ -33,6 +32,7 @@ jobs:
       with: 
         coverage-file: ./coverage-report.json
         base-coverage-file: ./coverage-report.json
+        github-token: ${{ secrets.GITHUB_TOKEN }}
 
   e2e_specs:
     name: Cypress specs
