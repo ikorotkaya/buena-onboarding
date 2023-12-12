@@ -31,7 +31,7 @@ jobs:
       uses: ArtiomTr/jest-coverage-report-action@v2
       with: 
         coverage-file: coverage-report.json
-        base-coverage-file: coverage-final.json
+        base-coverage-file: coverage-report.json
 
   e2e_specs:
     name: Cypress specs
