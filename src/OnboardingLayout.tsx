@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/OnboardingNavbar";
-import NextButton from "./components/NextButton";
+import NextButton from "./components/buttons/NextButton";
 import { useOnboardingStore } from "./store";
 import { useEffect } from "react";
 import ONBOARDING_PAGES from "../onboarding-pages.json";

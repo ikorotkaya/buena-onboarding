@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { pages } from "../utils/onboarding-routing";
 import { useOnboardingStore } from "../store";
-import SecondaryButton from "./SecondaryButton";
+import SecondaryButton from "./buttons/SecondaryButton";
 import { useState, useEffect } from "react";
 import logo from "../icons/logo.svg";
 

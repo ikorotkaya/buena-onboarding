@@ -1,6 +1,6 @@
 import Headline from "../components/Headline";
 import Subheadline from "../components/Subheadline";
-import AnimatedPrimaryButton from "../components/AnimatedPrimaryButton";
+import AnimatedPrimaryButton from "../components/buttons/AnimatedPrimaryButton";
 import ONBOARDING_STEPS from "../../onboarding-pages.json";
 
 export default function HomePage() {

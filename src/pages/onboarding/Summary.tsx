@@ -1,9 +1,20 @@
 import { useOnboardingStore } from "../../store";
 import Headline from "../../components/Headline";
-import AnimatedPrimaryButton from "../../components/AnimatedPrimaryButton";
+import AnimatedPrimaryButton from "../../components/buttons/AnimatedPrimaryButton";
+import ONBOARDING_PAGES from "../../../onboarding-pages.json";
+import { OnboardingStore } from "../../store";
 
 export default function Summary() {
   const { name, email, phoneNumber, income } = useOnboardingStore();
+  const onboardingStore = useOnboardingStore();
+
+  const validityStoreKeys = ONBOARDING_PAGES.filter(
+    (step) => step.storeKey
+  ).map((step) => step.storeKey);
+
+  const buttonEnabled = validityStoreKeys.every(
+    (storeKey) => onboardingStore[storeKey as keyof OnboardingStore]
+  );
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
@@ -28,6 +39,7 @@ export default function Summary() {
           link="/final-page"
           textId="submit-button"
           buttonText="Submit"
+          disabled={!buttonEnabled}
         />
       </div>
     </div>

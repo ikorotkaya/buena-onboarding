@@ -5,13 +5,15 @@ interface AnimatedPrimaryButtonProps {
   textId: string;
   buttonText: string;
   className?: string;
+  disabled?: boolean;
 }
 
-export default function t({
+export default function AnimatedPrimaryButton({
   link,
   textId,
   buttonText,
-  className = ""
+  className = "",
+  disabled = false
 }: AnimatedPrimaryButtonProps) {
   return (
     <>
@@ -20,7 +22,10 @@ export default function t({
         data-testid={textId}
         className={`relative w-full inline-flex items-center justify-center 
           px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out 
-          bg-cyan-500 rounded text-white group ${className}`}
+          bg-cyan-500 rounded text-white group ${className} 
+          ${
+            disabled ? "bg-neutral-400 pointer-events-none" : "cursor-pointer"
+          }`}
       >
         <span
           className="absolute inset-0 flex items-center justify-center w-full h-full

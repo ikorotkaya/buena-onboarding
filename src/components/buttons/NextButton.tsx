@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { pages } from "../utils/onboarding-routing";
+import { pages } from "../../utils/onboarding-routing";
 import { useEffect, useState } from "react";
-import { useOnboardingStore } from "../store";
-import ArrowRightIcon from "./ArrowRightIcon";
+import { useOnboardingStore } from "../../store";
+import ArrowRightIcon from "../ArrowRightIcon";
 
 type NextButtonProps = {
   className?: string;

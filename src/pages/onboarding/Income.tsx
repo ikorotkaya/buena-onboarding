@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import NextButton from "../../components/NextButton";
+import NextButton from "../../components/buttons/NextButton";
 import { useOnboardingStore } from "../../store";
 import Headline from "../../components/Headline";
 
