@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import Headline from "../components/Headline";
+import Subheadline from "../components/Subheadline";
 
 export default function FinalPage() {
   const [windowSize, setWindowSize] = useState({
@@ -24,12 +25,7 @@ export default function FinalPage() {
         <Headline>Thank you for your submission!</Headline>
       </div>
 
-      <div
-        data-testid="submission-confirmation"
-        className="flex justify-center text-lg leading-8 text-stone-600"
-      >
-        We will be in touch shortly.
-      </div>
+      <Subheadline>We will be in touch shortly.</Subheadline>
     </div>
   );
 }

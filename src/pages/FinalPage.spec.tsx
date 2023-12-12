@@ -12,8 +12,8 @@ describe("Final Page", () => {
 
   test("renders submission confirmation", () => {
     render(<FinalPage />, { wrapper: BrowserRouter });
-    const submissionConfirmation = screen.getByTestId(
-      "submission-confirmation"
+    const submissionConfirmation = screen.getByText(
+      "We will be in touch shortly."
     );
     expect(submissionConfirmation).toBeInTheDocument();
   });
