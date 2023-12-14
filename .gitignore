@@ -24,3 +24,5 @@ coverage-report.json
 *.njsproj
 *.sln
 *.sw?
+
+storybook-static

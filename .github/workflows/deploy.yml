@@ -1,11 +1,7 @@
 # https://dev.to/github/how-to-deploy-a-static-site-in-any-framework-of-your-choice-github-pages-neh
 name: Deploy (GitHub Pages)
 
-on:
-  push:
-  pull_request:
-    branches:
-      - main
+on: push
 
 permissions:
   contents: write
@@ -90,5 +86,32 @@ jobs:
       with:
         build_directory: dist
         NETLIFY_SITE_ID: ${{ secrets.SITE_ID }}
+        NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
+        NETLIFY_DEPLOY_TO_PROD: true
+
+  deploy_storybook:
+    needs: [unit_specs, e2e_specs, linting]
+    if: github.ref == 'refs/heads/main'
+    name: Deploy Storybook to Netlify
+    runs-on: ubuntu-latest
+    environment: netlify
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+
+    - name: Install dependencies
+      uses: bahmutov/npm-install@v1
+
+    - name: Build Storybook
+      run: npm run build-storybook
+    
+    - uses: nelonoel/branch-name@v1.0.1
+
+    - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+      with:
+        build_directory: storybook-static
+        NETLIFY_SITE_ID: ${{ secrets.STORYBOOK_SITE_ID }}
         NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
         NETLIFY_DEPLOY_TO_PROD: true

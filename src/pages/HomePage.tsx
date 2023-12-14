@@ -17,7 +17,7 @@ export default function HomePage() {
       <div className="flex flex-row justify-center items-end pb-4">
         <AnimatedPrimaryButton
           link={`/onboarding/${ONBOARDING_STEPS[0].slug}`}
-          textId="homepage-cta"
+          testId="homepage-cta"
           className="md:w-auto"
         >
           Get started

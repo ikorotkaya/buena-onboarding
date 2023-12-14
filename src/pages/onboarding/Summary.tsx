@@ -37,7 +37,7 @@ export default function Summary() {
       <div className="py-4 px-8 md:p-0 w-full fixed md:relative bottom-0 left-0">
         <AnimatedPrimaryButton
           link="/final-page"
-          textId="submit-button"
+          testId="submit-button"
           disabled={!buttonEnabled}
         >
           Submit
