@@ -27,7 +27,8 @@ This project is a test task for Buena. It's a React SPA that implements an onboa
 5. To give users on mobile the same experience, I've added a progress bar at the top of the screen. Read more about it in [this design note](design_notes/5_mobile_navigation.md).
 6. Unit tests with Jest. I've simply followed positive/negative/edge case approach. Soon I'll add coverage support and more tests. In the meantime, you can check out the complete unit [test file for the Name onboarding screen](https://github.com/ikorotkaya/buena-onboarding/blob/main/src/pages/onboarding/Name.spec.tsx). I also added GitHub action that reports test results on pull requests. [Example](https://github.com/ikorotkaya/buena-onboarding/commit/000bfd9fe19741a3bce71c346104922d8fed16ee).
 7. E2E tests with Cypress. I've added a few tests to check if the onboarding flow works as expected. Again, I'll add more tests soon. Both unit and E2E tests are run on every push to the main branch via Github Actions. Take a look at [a sample build](https://github.com/ikorotkaya/buena-onboarding/actions/runs/7173746064). 🔥
-8. Surprise feature. 🎁 Try the onboarding flow and reach the end: https://buena-onboarding.netlify.app/
+8. Storybook. I add well-defined atomic components to the storybook. You can find the live here: https://buena-onboarding-storybook.netlify.app/ 
+9. Surprise feature. 🎁 Try the onboarding flow and reach the end: https://buena-onboarding.netlify.app/
 
 ## How to add a new onboarding page
 
@@ -45,13 +46,13 @@ Of course, I was short on time and haven't done everything I wanted to do. Here'
 - [x] Create static page to handle page refresh ([Netlify redirects config](https://docs.netlify.com/routing/redirects/rewrites-proxies/#shadowing))
 - [x] Make mobile "Next" button page-agnostic
 - [x] Add coverage support for Jest
-- [ ] Introduce a design system and align the look and feel of all components (Storybook)
+- [x] Add Storybook
+- [ ] Introduce a design system and align the look and feel of all components
 - [ ] Add more animations and transitions
 - [ ] Add i18n support (I bet we'll have DE and EN-speaking users) 
 - [ ] Add more unit and E2E tests
 - [ ] Use keyboard for navigation
 - [ ] a11y
-- [ ] 
 
 ## Development 
 
