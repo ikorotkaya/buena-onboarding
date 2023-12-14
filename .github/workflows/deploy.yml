@@ -109,7 +109,7 @@ jobs:
     - uses: jsmrcaga/action-netlify-deploy@v2.0.0
       with:
         build_directory: diststorybook-static
-        NETLIFY_SITE_ID: ${{ secrets.SITE_ID }}
+        NETLIFY_SITE_ID: ${{ secrets.STORYBOOK_SITE_ID }}
         NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
         NETLIFY_DEPLOY_TO_PROD: true
       
