@@ -54,6 +54,8 @@ Of course, I was short on time and haven't done everything I wanted to do. Here'
 - [ ] Add more unit and E2E tests
 - [ ] Use keyboard for navigation
 - [ ] a11y
+- [ ] Add robots.txt
+- [ ] Add SEO meta tags
 
 ## Development 
 
