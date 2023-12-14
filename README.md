@@ -49,7 +49,9 @@ Of course, I was short on time and haven't done everything I wanted to do. Here'
 - [ ] Add more animations and transitions
 - [ ] Add i18n support (I bet we'll have DE and EN-speaking users) 
 - [ ] Add more unit and E2E tests
+- [ ] Use keyboard for navigation
 - [ ] a11y
+- [ ] 
 
 ## Development 
 
