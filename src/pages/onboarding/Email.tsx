@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import NextButton from "../../components/buttons/NextButton";
-import { useOnboardingStore } from "../../store";
 import TextInput from "../../components/TextInput";
 import Headline from "../../components/Headline";
 import ErrorMessage from "../../components/ErrorMessage";
+import { useOnboardingStore } from "../../store";
 
 export default function Email() {
   const { email, setEmail, emailValid, setEmailValid } = useOnboardingStore();
@@ -19,7 +19,7 @@ export default function Email() {
 
   useEffect(() => {
     setEmailValid(validateEmail(email));
-  }, [email]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [email]);
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">

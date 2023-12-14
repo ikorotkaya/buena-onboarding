@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./Layout";
 import OnboardingLayout from "./OnboardingLayout";
@@ -11,7 +12,6 @@ import NoMatch from "./pages/NoMatch";
 import FinalPage from "./pages/FinalPage";
 import { useOnboardingStore } from "./store";
 import { getCurrentPageIndex } from "./utils/onboarding-routing";
-import { useEffect } from "react";
 
 function App() {
   const { setCurrentPageIndex } = useOnboardingStore();

@@ -1,8 +1,8 @@
 import { useOnboardingStore } from "../../store";
 import Headline from "../../components/Headline";
 import AnimatedPrimaryButton from "../../components/buttons/AnimatedPrimaryButton";
-import ONBOARDING_PAGES from "../../../onboarding-pages.json";
 import { OnboardingStore } from "../../store";
+import ONBOARDING_PAGES from "../../../onboarding-pages.json";
 
 export default function Summary() {
   const { name, email, phoneNumber, income } = useOnboardingStore();

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
-import ONBOARDING_PAGES from "../../onboarding-pages.json";
-import { useOnboardingStore } from "../store";
+
 import Navbar from "./Navbar";
-import type { OnboardingStore } from "../store";
+
+import { OnboardingStore, useOnboardingStore } from "../store";
+import ONBOARDING_PAGES from "../../onboarding-pages.json";
 
 export default function Sidebar() {
   const { currentPageIndex } = useOnboardingStore();

@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import HomePage from "./HomePage";
 import { BrowserRouter } from "react-router-dom";
+import HomePage from "./HomePage";
 
 // https://testing-library.com/docs/example-react-router/
 

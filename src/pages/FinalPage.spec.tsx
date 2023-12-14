@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import FinalPage from "./FinalPage";
 import { BrowserRouter } from "react-router-dom";
+import FinalPage from "./FinalPage";
 
 describe("Final Page", () => {
   test("renders thank you message", () => {

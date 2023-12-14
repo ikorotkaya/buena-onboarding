@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Name from "./Name";
 import { BrowserRouter } from "react-router-dom";
+import Name from "./Name";
 
 describe("Name onboarding screen", () => {
   test("renders the headline correctly", () => {

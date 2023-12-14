@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
-import { pages } from "../utils/onboarding-routing";
-import { useOnboardingStore } from "../store";
-import SecondaryButton from "./buttons/SecondaryButton";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import logo from "../icons/logo.svg";
+import SecondaryButton from "./buttons/SecondaryButton";
+
+import { useOnboardingStore } from "../store";
+import { pages } from "../utils/onboarding-routing";
 
 export default function OnboardingNavbar({
   className = ""

@@ -1,12 +1,10 @@
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/OnboardingNavbar";
 import NextButton from "./components/buttons/NextButton";
-import { useOnboardingStore } from "./store";
-import { useEffect } from "react";
+import { useOnboardingStore, OnboardingStore } from "./store";
 import ONBOARDING_PAGES from "../onboarding-pages.json";
-import { useState } from "react";
-import type { OnboardingStore } from "./store";
 
 export default function OnboardingLayout() {
   const { currentPageIndex } = useOnboardingStore();
