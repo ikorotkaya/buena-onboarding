@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-interface AnimatedPrimaryButtonProps {
+export interface AnimatedPrimaryButtonProps {
   link: string;
-  textId: string;
+  testId: string;
   className?: string;
   disabled?: boolean;
   children: React.ReactNode;
@@ -10,7 +10,7 @@ interface AnimatedPrimaryButtonProps {
 
 export default function AnimatedPrimaryButton({
   link,
-  textId,
+  testId,
   className = "",
   disabled = false,
   children
@@ -19,7 +19,7 @@ export default function AnimatedPrimaryButton({
     <>
       <Link
         to={link}
-        data-testid={textId}
+        data-testid={testId}
         className={`relative w-full inline-flex items-center justify-center 
           px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out 
           bg-cyan-500 rounded text-white group ${className} 
