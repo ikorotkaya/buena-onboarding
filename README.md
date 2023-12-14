@@ -17,6 +17,7 @@ This project is a test task for Buena. It's a React SPA that implements an onboa
 * Prettier
 * Github Actions for CI
 * Netlify for hosting
+* Storybook
 
 ## Features
 
