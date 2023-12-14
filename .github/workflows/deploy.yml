@@ -103,13 +103,15 @@ jobs:
 
     - name: Install dependencies
       uses: bahmutov/npm-install@v1
+
+    - name: Build Storybook
+      run: npm run build-storybook
     
     - uses: nelonoel/branch-name@v1.0.1
 
     - uses: jsmrcaga/action-netlify-deploy@v2.0.0
       with:
-        build_directory: diststorybook-static
+        build_directory: storybook-static
         NETLIFY_SITE_ID: ${{ secrets.STORYBOOK_SITE_ID }}
         NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
         NETLIFY_DEPLOY_TO_PROD: true
-      
