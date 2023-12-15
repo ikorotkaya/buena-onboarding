@@ -46,6 +46,12 @@
     }
   },
 
+  "components": {
+    "LanguageSwitcher": {
+      "choose_language": "Sprache wählen"
+    }
+  },
+
   "sidebarLinks": {
     "name": "Name",
     "email": "E-Mail",

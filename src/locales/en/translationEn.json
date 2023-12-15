@@ -45,7 +45,11 @@
       "cta": "Go back home"
     }
   },
-
+  "components": {
+    "LanguageSwitcher": {
+      "choose_language": "Choose language"
+    }
+  },
   "sidebarLinks": {
     "name": "Name",
     "email": "Email",
