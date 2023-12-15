@@ -2,17 +2,17 @@ import Headline from "../components/headlines/Headline";
 import Subheadline from "../components/headlines/Subheadline";
 import AnimatedPrimaryButton from "../components/buttons/AnimatedPrimaryButton";
 import ONBOARDING_STEPS from "../../onboarding-pages.json";
+import { useTranslation } from "react-i18next";
 
 export default function HomePage() {
+  const { t } = useTranslation();
   return (
     <div className="grid grid-rows-[3fr,2fr,1fr] ">
       <div className="flex items-end justify-center text-center">
-        <Headline>Welcome to Buena</Headline>
+        <Headline>{t("homePageHeadline")}</Headline>
       </div>
 
-      <Subheadline>
-        Enter your personal details and start your journey today.
-      </Subheadline>
+      <Subheadline>{t("homePageSubheadline")}</Subheadline>
 
       <div className="flex flex-row justify-center items-end pb-4">
         <AnimatedPrimaryButton
@@ -20,7 +20,7 @@ export default function HomePage() {
           testId="homepage-cta"
           className="md:w-auto"
         >
-          Get started
+          {t("homePageCta")}
         </AnimatedPrimaryButton>
       </div>
     </div>

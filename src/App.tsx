@@ -11,15 +11,22 @@ import NoMatch from "./pages/NoMatch";
 import FinalPage from "./pages/FinalPage";
 import { useOnboardingStore } from "./store";
 import { getCurrentPageIndex } from "./utils/onboarding-routing";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import "./i18n";
 
 function App() {
+  const { i18n } = useTranslation();
+  const [locale, setLocale] = useState<string>("en");
+
   const { setCurrentPageIndex } = useOnboardingStore();
   const location = useLocation();
 
   useEffect(() => {
+    setLocale(i18n.language);
     setCurrentPageIndex(getCurrentPageIndex());
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    console.log(locale);
+  }, [i18n.language]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     setCurrentPageIndex(getCurrentPageIndex());

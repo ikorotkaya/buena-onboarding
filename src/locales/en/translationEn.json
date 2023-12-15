@@ -1,0 +1,40 @@
+{
+  "de": "German",
+  "en": "English",
+  "imageLink": "src/icons/english.svg",
+
+  "homePageHeadline": "Welcome to Buena",
+  "homePageSubheadline": "Enter your personal details and start your journey today.",
+  "homePageCta": "Get started",
+
+  "namePageHeadline": "What's your name?",
+  "emailPageHeadline": "What's your email address?",
+  "phonePageHeadline": "What's your phone number?",
+  "incomePageHeadline": "What's your income?",
+  "summaryPageHeadline": "Please review your details",
+
+  "sidebarLinks": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone number",
+    "income": "Income"
+  },
+
+  "errorMessages": {
+    "name": "Please enter your full name",
+    "email": "Please enter a valid email address",
+    "phone": "Please enter a valid phone number"
+  },
+
+  "nextButton": "Next",
+
+  "summaryHeadline": "Bitte überprüfen Sie Ihre Angaben",
+  "summaryPageCta": "Submit",
+
+  "finalPageHeadline": "Thank you for your submission!",
+  "finalPageSubheadline": "We will be in touch shortly.",
+
+  "errorPageHeadline": "Page not found",
+  "errorPageSubheadline": "Sorry, we couldn't find the page you're looking for.",
+  "errorPageCta": "Go back home"
+}

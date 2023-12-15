@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import Headline from "../components/headlines/Headline";
 import Subheadline from "../components/headlines/Subheadline";
+import { useTranslation } from "react-i18next";
 
 export default function FinalPage() {
+  const { t } = useTranslation();
+
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight
@@ -22,10 +25,10 @@ export default function FinalPage() {
       <Confetti width={windowSize.width} height={windowSize.height} />
 
       <div className="flex items-end justify-center text-center">
-        <Headline>Thank you for your submission!</Headline>
+        <Headline>{t("finalPageHeadline")}</Headline>
       </div>
 
-      <Subheadline>We will be in touch shortly.</Subheadline>
+      <Subheadline>{t("finalPageSubheadline")}</Subheadline>
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Headline from "../components/headlines/Headline";
+import { useTranslation } from "react-i18next";
 
 export default function NoMatch() {
+  const { t } = useTranslation();
   return (
     <main className="flex flex-col justify-center mt-24">
       <div className="flex justify-center font-semibold text-cyan-700 mb-6 text-4xl">
@@ -9,11 +11,11 @@ export default function NoMatch() {
       </div>
 
       <div className="flex items-end justify-center">
-        <Headline>Page not found</Headline>
+        <Headline>{t("errorPageHeadline")}</Headline>
       </div>
 
       <div className="flex justify-center text-center text-lg leading-8 text-stone-600 mb-6">
-        Sorry, we couldn't find the page you're looking for.
+        {t("errorPageSubheadline")}
       </div>
 
       <div
@@ -28,7 +30,7 @@ export default function NoMatch() {
           focus:outline-none bg-stone-900 text-white 
           rounded-md"
         >
-          Go back home
+          {t("errorPageCta")}
         </Link>
       </div>
     </main>

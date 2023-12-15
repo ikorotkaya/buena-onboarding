@@ -1,0 +1,40 @@
+{
+  "de": "Deutsch",
+  "en": "Englisch",
+  "imageLink": "src/icons/german.svg",
+
+  "homePageHeadline": "Willkommen in Buena",
+  "homePageSubheadline": "Geben Sie Ihre persönlichen Daten ein und starten Sie noch heute Ihre Reise.",
+  "homePageCta": "Los geht's!",
+
+  "namePageHeadline": "Wie lautet Ihr Name?",
+  "emailPageHeadline": "Wie lautet Ihre E-Mail-Adresse?",
+  "phonePageHeadline": "Wie lautet Ihre Telefonnummer?",
+  "incomePageHeadline": "Was ist Ihr Einkommen?",
+  "summaryPageHeadline": "Bitte überprüfen Sie Ihre Angaben",
+
+  "sidebarLinks": {
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "income": "Einkommen"
+  },
+
+  "errorMessages": {
+    "name": "Bitte geben Sie Ihren vollständigen Namen ein",
+    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "phone": "Bitte geben Sie eine gültige Telefonnummer ein"
+  },
+
+  "nextButton": "Weiter",
+
+  "summaryHeadline": "Bitte überprüfen Sie Ihre Angaben",
+  "summaryPageCta": "Absenden",
+
+  "finalPageHeadline": "Vielen Dank für Ihre Einreichung!",
+  "finalPageSubheadline": "Wir werden uns in Kürze bei Ihnen melden.",
+
+  "errorPageHeadline": "Seite nicht gefunden",
+  "errorPageSubheadline": "Entschuldigung, wir konnten die von Ihnen gesuchte Seite nicht finden.",
+  "errorPageCta": "Zurück zur Startseite"
+}
