@@ -10,21 +10,21 @@ const Template: Story<HeadlineProps> = (args) => {
   return <Headline {...args} />;
 };
 
-export const Default = Template.bind({});
-Default.args = {
+export const DefaultHeadline = Template.bind({});
+DefaultHeadline.args = {
   type: "1",
   children: "Default Headline Level 1"
 };
 
-export const CustomStyle = Template.bind({});
-CustomStyle.args = {
+export const DefaultSecondHeadline = Template.bind({});
+DefaultSecondHeadline.args = {
   type: "2",
   style: "3xl",
   children: "Default Headline Level 2"
 };
 
-export const WithClassName = Template.bind({});
-WithClassName.args = {
+export const CustomHeadline = Template.bind({});
+CustomHeadline.args = {
   type: "1",
   style: "3xl",
   children: "Custom Headline"

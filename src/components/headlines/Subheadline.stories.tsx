@@ -10,4 +10,4 @@ const Template: Story<SubheadlineProps> = (args) => {
   return <Subheadline {...args}>We will contact you shortly.</Subheadline>;
 };
 
-export const Subheadline_h3 = Template.bind({});
+export const Default = Template.bind({});
