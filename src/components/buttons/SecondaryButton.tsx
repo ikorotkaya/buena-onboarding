@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
-interface SecondaryButtonProps {
+export interface SecondaryButtonProps {
   link: string;
 }
 

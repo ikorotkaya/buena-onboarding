@@ -8,7 +8,7 @@ const DEFAULT_TYPE_STYLES = {
   "2": "3xl"
 };
 
-interface HeadlineProps {
+export interface HeadlineProps {
   type?: "1" | "2";
   style?: "4xl" | "3xl" | "";
   children: string;

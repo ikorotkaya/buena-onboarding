@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Headline from "../components/Headline";
+import Headline from "../components/headlines/Headline";
 
 export default function NoMatch() {
   return (

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import NextButton from "../../components/buttons/NextButton";
 import { useOnboardingStore } from "../../store";
 import TextInput from "../../components/TextInput";
-import Headline from "../../components/Headline";
+import Headline from "../../components/headlines/Headline";
 import ErrorMessage from "../../components/ErrorMessage";
 
 export default function PhoneNumber() {

@@ -1,4 +1,4 @@
-interface SubheadlineProps {
+export interface SubheadlineProps {
   children: string;
 }
 

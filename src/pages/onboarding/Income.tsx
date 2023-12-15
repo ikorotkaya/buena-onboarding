@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import NextButton from "../../components/buttons/NextButton";
 import { useOnboardingStore } from "../../store";
-import Headline from "../../components/Headline";
+import Headline from "../../components/headlines/Headline";
 
 const incomeRanges = [
   { value: "0-1000", label: "0 - 1.000" },

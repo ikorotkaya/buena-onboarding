@@ -1,5 +1,5 @@
-import Headline from "../components/Headline";
-import Subheadline from "../components/Subheadline";
+import Headline from "../components/headlines/Headline";
+import Subheadline from "../components/headlines/Subheadline";
 import AnimatedPrimaryButton from "../components/buttons/AnimatedPrimaryButton";
 import ONBOARDING_STEPS from "../../onboarding-pages.json";
 

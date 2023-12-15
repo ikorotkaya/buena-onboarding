@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useOnboardingStore } from "../../store";
 import ArrowRightIcon from "../ArrowRightIcon";
 
-type NextButtonProps = {
+export type NextButtonProps = {
   className?: string;
   disabled: boolean;
 };

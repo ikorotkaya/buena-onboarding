@@ -1,5 +1,5 @@
 import { useOnboardingStore } from "../../store";
-import Headline from "../../components/Headline";
+import Headline from "../../components/headlines/Headline";
 import AnimatedPrimaryButton from "../../components/buttons/AnimatedPrimaryButton";
 import ONBOARDING_PAGES from "../../../onboarding-pages.json";
 import { OnboardingStore } from "../../store";

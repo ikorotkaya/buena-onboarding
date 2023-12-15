@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Confetti from "react-confetti";
-import Headline from "../components/Headline";
-import Subheadline from "../components/Subheadline";
+import Headline from "../components/headlines/Headline";
+import Subheadline from "../components/headlines/Subheadline";
 
 export default function FinalPage() {
   const [windowSize, setWindowSize] = useState({
