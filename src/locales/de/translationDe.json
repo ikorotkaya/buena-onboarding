@@ -1,7 +1,6 @@
 {
   "de": "Deutsch",
   "en": "Englisch",
-  "imageLink": "src/icons/german.svg",
 
   "pages": {
     "home": {

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import LanguageDropDownMenu from "./LanguageDropDown";
 
 export default function LanguageSwitcher() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -21,7 +21,7 @@ export default function LanguageSwitcher() {
   return (
     <div className="relative flex items-center justify-end">
       <div role="button" className="language-icon w-7" onClick={toggleMenu}>
-        <img src={t("imageLink")} alt="choose-language" />
+        <img src={`/src/icons/languages/${i18n.language}.svg`} alt="language" />
       </div>
       {menuOpen && <LanguageDropDownMenu setMenuOpen={setMenuOpen} />}
     </div>
