@@ -12,7 +12,8 @@
 
     "name": {
       "headline": "Wie lautet Ihr Name?",
-      "errorMessage": "Bitte geben Sie Ihren vollständigen Namen ein."
+      "errorMessage": "Bitte geben Sie Ihren vollständigen Namen ein.",
+      "placeholder": "Jan Schmidt"
     },
 
     "email": {

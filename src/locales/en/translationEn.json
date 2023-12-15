@@ -12,7 +12,8 @@
 
     "name": {
       "headline": "What's your name?",
-      "errorMessage": "Please enter a valid name."
+      "errorMessage": "Please enter a valid name.",
+      "placeholder": "Jane Smith"
     },
 
     "email": {

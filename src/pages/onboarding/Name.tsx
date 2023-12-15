@@ -30,7 +30,7 @@ export default function Name() {
         <TextInput
           defaultValue={name}
           type="text"
-          placeholder="Jane Smith"
+          placeholder={t("pages.name.placeholder")}
           onChange={handleNameChange}
         />
 
