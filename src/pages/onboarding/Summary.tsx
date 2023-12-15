@@ -3,8 +3,10 @@ import Headline from "../../components/headlines/Headline";
 import AnimatedPrimaryButton from "../../components/buttons/AnimatedPrimaryButton";
 import ONBOARDING_PAGES from "../../../onboarding-pages.json";
 import { OnboardingStore } from "../../store";
+import { useTranslation } from "react-i18next";
 
 export default function Summary() {
+  const { t } = useTranslation();
   const { name, email, phoneNumber, income } = useOnboardingStore();
   const onboardingStore = useOnboardingStore();
 
@@ -18,7 +20,7 @@ export default function Summary() {
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
-      <Headline style="3xl">Check your info:</Headline>
+      <Headline style="3xl">{t("pages.summary.headline")}</Headline>
 
       <div
         data-testid="summary"
@@ -40,7 +42,7 @@ export default function Summary() {
           testId="submit-button"
           disabled={!buttonEnabled}
         >
-          Submit
+          {t("pages.summary.cta")}
         </AnimatedPrimaryButton>
       </div>
     </div>

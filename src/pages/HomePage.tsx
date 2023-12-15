@@ -9,10 +9,10 @@ export default function HomePage() {
   return (
     <div className="grid grid-rows-[3fr,2fr,1fr] ">
       <div className="flex items-end justify-center text-center">
-        <Headline>{t("homePageHeadline")}</Headline>
+        <Headline>{t("pages.home.headline")}</Headline>
       </div>
 
-      <Subheadline>{t("homePageSubheadline")}</Subheadline>
+      <Subheadline>{t("pages.home.subheadline")}</Subheadline>
 
       <div className="flex flex-row justify-center items-end pb-4">
         <AnimatedPrimaryButton
@@ -20,7 +20,7 @@ export default function HomePage() {
           testId="homepage-cta"
           className="md:w-auto"
         >
-          {t("homePageCta")}
+          {t("pages.home.cta")}
         </AnimatedPrimaryButton>
       </div>
     </div>

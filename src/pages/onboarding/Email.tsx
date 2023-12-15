@@ -4,8 +4,10 @@ import { useOnboardingStore } from "../../store";
 import TextInput from "../../components/TextInput";
 import Headline from "../../components/headlines/Headline";
 import ErrorMessage from "../../components/ErrorMessage";
+import { useTranslation } from "react-i18next";
 
 export default function Email() {
+  const { t } = useTranslation();
   const { email, setEmail, emailValid, setEmailValid } = useOnboardingStore();
 
   const validateEmail = (input: string) => {
@@ -23,7 +25,7 @@ export default function Email() {
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
-      <Headline style="3xl">What is your email?</Headline>
+      <Headline style="3xl">{t("pages.email.headline")}</Headline>
 
       <div className="mb-4">
         <TextInput
@@ -33,7 +35,9 @@ export default function Email() {
           onChange={handleEmailChange}
         />
 
-        {!emailValid && email && <ErrorMessage type="email address" />}
+        {!emailValid && email && (
+          <ErrorMessage>{t("pages.email.errorMessage")}</ErrorMessage>
+        )}
       </div>
 
       <NextButton className="hidden md:flex" disabled={!emailValid} />

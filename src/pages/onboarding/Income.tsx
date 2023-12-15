@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import NextButton from "../../components/buttons/NextButton";
 import { useOnboardingStore } from "../../store";
 import Headline from "../../components/headlines/Headline";
+import { useTranslation } from "react-i18next";
 
 const incomeRanges = [
   { value: "0-1000", label: "0 - 1.000" },
@@ -12,6 +13,7 @@ const incomeRanges = [
 ];
 
 export default function Income() {
+  const { t } = useTranslation();
   const { income, setIncome, incomeValid, setIncomeValid } =
     useOnboardingStore();
 
@@ -26,7 +28,7 @@ export default function Income() {
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
-      <Headline style="3xl">What is your income?</Headline>
+      <Headline style="3xl">{t("pages.income.headline")}</Headline>
 
       <div className="space-y-4 mb-4">
         {incomeRanges.map((range, index) => (

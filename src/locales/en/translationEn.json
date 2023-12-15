@@ -3,15 +3,48 @@
   "en": "English",
   "imageLink": "src/icons/english.svg",
 
-  "homePageHeadline": "Welcome to Buena",
-  "homePageSubheadline": "Enter your personal details and start your journey today.",
-  "homePageCta": "Get started",
+  "pages": {
+    "home": {
+      "headline": "Welcome to Buena",
+      "subheadline": "Enter your personal details and start your journey today.",
+      "cta": "Get started"
+    },
 
-  "namePageHeadline": "What's your name?",
-  "emailPageHeadline": "What's your email address?",
-  "phonePageHeadline": "What's your phone number?",
-  "incomePageHeadline": "What's your income?",
-  "summaryPageHeadline": "Please review your details",
+    "name": {
+      "headline": "What's your name?",
+      "errorMessage": "Please enter a valid name."
+    },
+
+    "email": {
+      "headline": "What's your email address?",
+      "errorMessage": "Please enter a valid email address."
+    },
+
+    "phone": {
+      "headline": "What's your phone number?",
+      "errorMessage": "Please enter a valid phone number."
+    },
+
+    "income": {
+      "headline": "What's your income?"
+    },
+
+    "summary": {
+      "headline": "Please review your details:",
+      "cta": "Submit"
+    },
+
+    "finalPage": {
+      "headline": "Thank you for your submission!",
+      "subheadline": "We will be in touch shortly."
+    },
+
+    "noMatch": {
+      "headline": "Page not found",
+      "subheadline": "Sorry, we couldn't find the page you're looking for.",
+      "cta": "Go back home"
+    }
+  },
 
   "sidebarLinks": {
     "name": "Name",
@@ -20,21 +53,6 @@
     "income": "Income"
   },
 
-  "errorMessages": {
-    "name": "Please enter your full name",
-    "email": "Please enter a valid email address",
-    "phone": "Please enter a valid phone number"
-  },
-
   "nextButton": "Next",
-
-  "summaryHeadline": "Bitte überprüfen Sie Ihre Angaben",
-  "summaryPageCta": "Submit",
-
-  "finalPageHeadline": "Thank you for your submission!",
-  "finalPageSubheadline": "We will be in touch shortly.",
-
-  "errorPageHeadline": "Page not found",
-  "errorPageSubheadline": "Sorry, we couldn't find the page you're looking for.",
-  "errorPageCta": "Go back home"
+  "backButton": "Back"
 }

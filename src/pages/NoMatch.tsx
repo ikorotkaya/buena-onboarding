@@ -11,11 +11,11 @@ export default function NoMatch() {
       </div>
 
       <div className="flex items-end justify-center">
-        <Headline>{t("errorPageHeadline")}</Headline>
+        <Headline>{t("pages.noMatch.headline")}</Headline>
       </div>
 
       <div className="flex justify-center text-center text-lg leading-8 text-stone-600 mb-6">
-        {t("errorPageSubheadline")}
+        {t("pages.noMatch.subheadline")}
       </div>
 
       <div
@@ -30,7 +30,7 @@ export default function NoMatch() {
           focus:outline-none bg-stone-900 text-white 
           rounded-md"
         >
-          {t("errorPageCta")}
+          {t("pages.noMatch.cta")}
         </Link>
       </div>
     </main>

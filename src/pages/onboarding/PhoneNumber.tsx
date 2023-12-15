@@ -4,8 +4,10 @@ import { useOnboardingStore } from "../../store";
 import TextInput from "../../components/TextInput";
 import Headline from "../../components/headlines/Headline";
 import ErrorMessage from "../../components/ErrorMessage";
+import { useTranslation } from "react-i18next";
 
 export default function PhoneNumber() {
+  const { t } = useTranslation();
   const { phoneNumber, setPhoneNumber, phoneNumberValid, setPhoneNumberValid } =
     useOnboardingStore();
 
@@ -23,7 +25,7 @@ export default function PhoneNumber() {
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
-      <Headline style="3xl">What is your phone number?</Headline>
+      <Headline style="3xl">{t("pages.phone.headline")}</Headline>
 
       <div className="mb-4">
         <TextInput
@@ -34,7 +36,7 @@ export default function PhoneNumber() {
         />
 
         {!phoneNumberValid && phoneNumber && (
-          <ErrorMessage type="phone number" />
+          <ErrorMessage>{t("pages.phone.errorMessage")}</ErrorMessage>
         )}
       </div>
 

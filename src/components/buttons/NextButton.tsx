@@ -3,6 +3,7 @@ import { pages } from "../../utils/onboarding-routing";
 import { useEffect, useState } from "react";
 import { useOnboardingStore } from "../../store";
 import ArrowRightIcon from "../ArrowRightIcon";
+import { useTranslation } from "react-i18next";
 
 export type NextButtonProps = {
   className?: string;
@@ -13,6 +14,7 @@ export default function NextButton({
   className = "",
   disabled
 }: NextButtonProps) {
+  const { t } = useTranslation();
   const { currentPageIndex } = useOnboardingStore();
   const [nextPage, setNextPage] = useState(pages[currentPageIndex + 1]);
 
@@ -37,7 +39,7 @@ export default function NextButton({
             }
           `}
         >
-          Next
+          {t("nextButton")}
           <ArrowRightIcon className="ml-2" />
         </Link>
       )}

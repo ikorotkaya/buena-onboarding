@@ -25,10 +25,10 @@ export default function FinalPage() {
       <Confetti width={windowSize.width} height={windowSize.height} />
 
       <div className="flex items-end justify-center text-center">
-        <Headline>{t("finalPageHeadline")}</Headline>
+        <Headline>{t("pages.finalPage.headline")}</Headline>
       </div>
 
-      <Subheadline>{t("finalPageSubheadline")}</Subheadline>
+      <Subheadline>{t("pages.finalPage.subheadline")}</Subheadline>
     </div>
   );
 }
