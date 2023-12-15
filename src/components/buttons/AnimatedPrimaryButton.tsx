@@ -22,9 +22,11 @@ export default function AnimatedPrimaryButton({
         data-testid={testId}
         className={`relative w-full inline-flex items-center justify-center 
           px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out 
-          bg-cyan-500 rounded text-white group ${className} 
+          bg-cyan-700 rounded text-white group ${className} 
           ${
-            disabled ? "bg-neutral-400 pointer-events-none" : "cursor-pointer"
+            disabled
+              ? "bg-neutral-400 text-white pointer-events-none"
+              : "cursor-pointer"
           }`}
       >
         <span

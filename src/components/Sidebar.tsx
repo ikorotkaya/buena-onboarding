@@ -47,9 +47,9 @@ export default function Sidebar() {
                       aria-hidden="true"
                     >
                       <span className="absolute h-4 w-4 rounded-full bg-cyan-300/50" />
-                      <span className="relative block h-2 w-2 rounded-full bg-cyan-600" />
+                      <span className="relative block h-2 w-2 rounded-full bg-cyan-700" />
                     </span>
-                    <span className="ml-3 text-sm font-medium text-cyan-600">
+                    <span className="ml-3 text-sm font-medium text-cyan-700">
                       {step.name}
                     </span>
                   </Link>
@@ -64,14 +64,14 @@ export default function Sidebar() {
                     <span className="flex items-start">
                       <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center">
                         <CheckCircleIcon
-                          className={`h-full w-full text-cyan-600`}
+                          className={`h-full w-full text-cyan-700`}
                           aria-hidden="true"
                         />
                       </span>
                       <span
                         className={`ml-3 text-sm font-medium ${
                           isStepCurrent(index)
-                            ? "text-cyan-600"
+                            ? "text-cyan-700"
                             : "text-gray-500"
                         }`}
                       >

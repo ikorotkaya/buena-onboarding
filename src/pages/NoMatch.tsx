@@ -4,7 +4,7 @@ import Headline from "../components/headlines/Headline";
 export default function NoMatch() {
   return (
     <main className="flex flex-col justify-center mt-24">
-      <div className="flex justify-center font-semibold text-cyan-500 mb-6 text-4xl">
+      <div className="flex justify-center font-semibold text-cyan-700 mb-6 text-4xl">
         404
       </div>
 

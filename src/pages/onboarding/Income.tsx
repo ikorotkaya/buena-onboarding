@@ -41,7 +41,7 @@ export default function Income() {
                 value={range.value}
                 checked={income === range.value}
                 onChange={handleIncomeChange}
-                className="h-4 w-4 mr-2 checked:bg-cyan-500 checked:focus:bg-cyan-500 focus:ring-cyan-500 cursor-pointer"
+                className="h-4 w-4 mr-2 checked:bg-cyan-700 checked:focus:bg-cyan-700 focus:ring-cyan-700 cursor-pointer"
               />
 
               {range.label}
