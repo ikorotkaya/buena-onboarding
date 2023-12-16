@@ -21,10 +21,14 @@ export default function LanguageDropDownMenu({
       : [];
 
   return (
-    <div className="menu-dropdown top-full flex flex-col items-center absolute right-0 z-10 rounded-md md:w-max w-max origin-top-right border-2 text-stone-900 md:border-stone-900 border-white bg-white ">
+    <div
+      className="menu-dropdown top-full flex flex-col items-center absolute 
+      right-0 z-10 rounded-md md:w-max w-max origin-top-right border-2 
+      text-stone-900 md:border-stone-900 border-white bg-white "
+    >
       {availableLanguages.map((language) => (
         <div
-          className="flex flex-col items-center justify-center cursor-pointer hover:bg-[#80DCAC] p-2 w-24"
+          className="flex flex-col items-center justify-center cursor-pointer hover:bg-[#80DCAC] p-2 w-24 first:rounded-t-md last:rounded-b-md"
           key={language}
           onClick={() => handleChange(language)}
         >
