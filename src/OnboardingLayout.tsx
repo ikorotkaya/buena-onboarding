@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Navbar from "./components/OnboardingNavbar";
+import OnboardingNavbar from "./components/OnboardingNavbar";
 import NextButton from "./components/buttons/NextButton";
 import { useOnboardingStore } from "./store";
 import { useEffect } from "react";
@@ -32,7 +32,7 @@ export default function OnboardingLayout() {
       </aside>
 
       <main className="">
-        <Navbar className="px-8 py-7 fixed top-0 left-0" />
+        <OnboardingNavbar className="px-8 py-7 fixed top-0 left-0" />
 
         <div className="px-0 md:px-16">
           <Outlet />
