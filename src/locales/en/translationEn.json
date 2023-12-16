@@ -23,7 +23,7 @@
     },
 
     "phone": {
-      "onboardingStepName": "Phone",
+      "onboardingStepName": "Phone Number",
       "headline": "What's your phone number?",
       "errorMessage": "Please enter a valid phone number."
     },

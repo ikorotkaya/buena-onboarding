@@ -94,6 +94,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     name: Drop CDN cache
     runs-on: ubuntu-latest
+    environment: netlify
     steps:    
     - name: Call Netlify API to drop cache
       run: >

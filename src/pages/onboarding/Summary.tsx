@@ -26,13 +26,13 @@ export default function Summary() {
         data-testid="summary"
         className="mb-12 grid grid-cols-[1fr,2fr] gap-1 border-dashed border-[1px] border-stone-300 rounded-md"
       >
-        <div className="px-4 py-2">{t(`pages.name.onboardingStepName`)}</div>
+        <div className="px-4 py-2">{t(`pages.name.onboardingStepName`)}:</div>
         <div className="px-4 py-2">{name}</div>
-        <div className="px-4 py-2">{t(`pages.email.onboardingStepName`)}</div>
+        <div className="px-4 py-2">{t(`pages.email.onboardingStepName`)}:</div>
         <div className="px-4 py-2">{email}</div>
-        <div className="px-4 py-2">{t(`pages.phone.onboardingStepName`)}</div>
+        <div className="px-4 py-2">{t(`pages.phone.onboardingStepName`)}:</div>
         <div className="px-4 py-2">{phoneNumber}</div>
-        <div className="px-4 py-2">{t(`pages.income.onboardingStepName`)}</div>
+        <div className="px-4 py-2">{t(`pages.income.onboardingStepName`)}:</div>
         <div className="px-4 py-2">{income}</div>
       </div>
 
