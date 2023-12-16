@@ -6,11 +6,11 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 const incomeRanges = [
-  { value: "0-1000", label: "0 - 1.000" },
-  { value: "1000-2000", label: "1.000 - 2.000" },
-  { value: "2000-3000", label: "2.000 - 3.000" },
-  { value: "3000-4000", label: "3.000 - 4.000" },
-  { value: "4000-plus", label: "> 4.000" }
+  { value: "0-1000", label: "< 1.000 EUR" },
+  { value: "1000-2000", label: "1.000 - 2.000 EUR" },
+  { value: "2000-3000", label: "2.000 - 3.000 EUR" },
+  { value: "3000-4000", label: "3.000 - 4.000 EUR" },
+  { value: "4000-plus", label: "> 4.000 EUR" }
 ];
 
 export default function Income() {
