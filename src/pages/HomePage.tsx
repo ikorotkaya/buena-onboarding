@@ -13,6 +13,8 @@ export default function HomePage() {
   const { firstOnboardingPage } = useOnboardingStore();
 
   const handleKeyDown = (e: KeyboardEvent) => {
+    e.preventDefault();
+
     if (e.key === "Enter") {
       navigate(`/onboarding/${firstOnboardingPage}`);
     }

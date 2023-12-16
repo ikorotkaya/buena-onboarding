@@ -23,6 +23,7 @@ export default function Name() {
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (nameValid) {
       navigate(`/onboarding/${nextOnboardingPage}`);
     }

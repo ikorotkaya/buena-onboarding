@@ -4,9 +4,12 @@ import AnimatedPrimaryButton from "../../components/buttons/AnimatedPrimaryButto
 import ONBOARDING_PAGES from "../../../onboarding-pages.json";
 import { OnboardingStore } from "../../store";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Summary() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const { name, email, phoneNumber, income } = useOnboardingStore();
   const onboardingStore = useOnboardingStore();
 
@@ -14,9 +17,23 @@ export default function Summary() {
     (step) => step.storeKey
   ).map((step) => step.storeKey);
 
-  const buttonEnabled = validityStoreKeys.every(
+  const submitButtonEnabled = validityStoreKeys.every(
     (storeKey) => onboardingStore[storeKey as keyof OnboardingStore]
   );
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Enter" && submitButtonEnabled) {
+      navigate(`/final-page`);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
@@ -40,7 +57,7 @@ export default function Summary() {
         <AnimatedPrimaryButton
           link="/final-page"
           testId="submit-button"
-          disabled={!buttonEnabled}
+          disabled={!submitButtonEnabled}
         >
           {t("pages.summary.cta")}
         </AnimatedPrimaryButton>
