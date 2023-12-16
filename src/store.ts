@@ -8,6 +8,7 @@ export type OnboardingStore = {
   phoneNumber: string;
   income: string;
   currentPageIndex: number;
+  firstOnboardingPage: string;
   nextOnboardingPage: string;
   nameValid: boolean;
   emailValid: boolean;
@@ -37,6 +38,7 @@ export const useOnboardingStore = create(
       phoneNumber: "",
       income: "",
       currentPageIndex: 0,
+      firstOnboardingPage: pages[0],
       nextOnboardingPage: pages[1],
       nameValid: false,
       emailValid: false,

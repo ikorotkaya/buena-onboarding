@@ -3,9 +3,28 @@ import Subheadline from "../components/headlines/Subheadline";
 import AnimatedPrimaryButton from "../components/buttons/AnimatedPrimaryButton";
 import ONBOARDING_STEPS from "../../onboarding-pages.json";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useOnboardingStore } from "../store";
 
 export default function HomePage() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const { firstOnboardingPage } = useOnboardingStore();
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Enter") {
+      navigate(`/onboarding/${firstOnboardingPage}`);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <div className="grid grid-rows-[3fr,2fr,1fr] ">
