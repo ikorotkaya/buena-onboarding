@@ -5,10 +5,13 @@ import TextInput from "../../components/TextInput";
 import Headline from "../../components/headlines/Headline";
 import ErrorMessage from "../../components/ErrorMessage";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 export default function Email() {
   const { t } = useTranslation();
-  const { email, setEmail, emailValid, setEmailValid } = useOnboardingStore();
+  const navigate = useNavigate();
+  const { email, setEmail, emailValid, setEmailValid, nextOnboardingPage } =
+    useOnboardingStore();
 
   const validateEmail = (input: string) => {
     const emailRegex = /^[a-zA-Z0-9/]+@[a-zA-Z0-9/]+\.[a-zA-Z0-9/]+$/;
@@ -17,6 +20,13 @@ export default function Email() {
 
   const handleEmailChange = (newEmail: string) => {
     setEmail(newEmail);
+  };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (emailValid) {
+      navigate(`/onboarding/${nextOnboardingPage}`);
+    }
   };
 
   useEffect(() => {
@@ -28,12 +38,14 @@ export default function Email() {
       <Headline style="3xl">{t("pages.email.headline")}</Headline>
 
       <div className="mb-4">
-        <TextInput
-          defaultValue={email}
-          type="email"
-          placeholder="you@example.com"
-          onChange={handleEmailChange}
-        />
+        <form onSubmit={handleFormSubmit}>
+          <TextInput
+            defaultValue={email}
+            type="email"
+            placeholder="you@example.com"
+            onChange={handleEmailChange}
+          />
+        </form>
 
         {!emailValid && email && (
           <ErrorMessage>{t("pages.email.errorMessage")}</ErrorMessage>

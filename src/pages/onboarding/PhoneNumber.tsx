@@ -5,11 +5,18 @@ import TextInput from "../../components/TextInput";
 import Headline from "../../components/headlines/Headline";
 import ErrorMessage from "../../components/ErrorMessage";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 export default function PhoneNumber() {
   const { t } = useTranslation();
-  const { phoneNumber, setPhoneNumber, phoneNumberValid, setPhoneNumberValid } =
-    useOnboardingStore();
+  const navigate = useNavigate();
+  const {
+    phoneNumber,
+    setPhoneNumber,
+    phoneNumberValid,
+    setPhoneNumberValid,
+    nextOnboardingPage
+  } = useOnboardingStore();
 
   const validatePhoneNumber = (input: string): boolean => {
     return input.length >= 10;
@@ -17,6 +24,13 @@ export default function PhoneNumber() {
 
   const handlePhoneNumberChange = (newPhoneNumber: string): void => {
     setPhoneNumber(newPhoneNumber);
+  };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (phoneNumberValid) {
+      navigate(`/onboarding/${nextOnboardingPage}`);
+    }
   };
 
   useEffect(() => {
@@ -28,12 +42,14 @@ export default function PhoneNumber() {
       <Headline style="3xl">{t("pages.phone.headline")}</Headline>
 
       <div className="mb-4">
-        <TextInput
-          defaultValue={phoneNumber}
-          type="text"
-          placeholder="+49 123 456 7890"
-          onChange={handlePhoneNumberChange}
-        />
+        <form onSubmit={handleFormSubmit}>
+          <TextInput
+            defaultValue={phoneNumber}
+            type="text"
+            placeholder="+49 123 456 7890"
+            onChange={handlePhoneNumberChange}
+          />
+        </form>
 
         {!phoneNumberValid && phoneNumber && (
           <ErrorMessage>{t("pages.phone.errorMessage")}</ErrorMessage>

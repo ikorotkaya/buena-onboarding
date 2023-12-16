@@ -5,10 +5,13 @@ import TextInput from "../../components/TextInput";
 import Headline from "../../components/headlines/Headline";
 import ErrorMessage from "../../components/ErrorMessage";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 export default function Name() {
   const { t } = useTranslation();
-  const { name, setName, nameValid, setNameValid } = useOnboardingStore();
+  const navigate = useNavigate();
+  const { name, setName, nameValid, setNameValid, nextOnboardingPage } =
+    useOnboardingStore();
 
   const validateName = (input: string) => {
     return input.length >= 2;
@@ -16,6 +19,13 @@ export default function Name() {
 
   const handleNameChange = (newName: string) => {
     setName(newName);
+  };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (nameValid) {
+      navigate(`/onboarding/${nextOnboardingPage}`);
+    }
   };
 
   useEffect(() => {
@@ -27,12 +37,14 @@ export default function Name() {
       <Headline style="3xl">{t("pages.name.headline")}</Headline>
 
       <div className="mb-4">
-        <TextInput
-          defaultValue={name}
-          type="text"
-          placeholder={t("pages.name.placeholder")}
-          onChange={handleNameChange}
-        />
+        <form onSubmit={handleFormSubmit}>
+          <TextInput
+            defaultValue={name}
+            type="text"
+            placeholder={t("pages.name.placeholder")}
+            onChange={handleNameChange}
+          />
+        </form>
 
         {!nameValid && name && (
           <ErrorMessage>{t("pages.name.errorMessage")}</ErrorMessage>

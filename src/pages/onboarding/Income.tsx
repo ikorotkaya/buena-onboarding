@@ -3,6 +3,7 @@ import NextButton from "../../components/buttons/NextButton";
 import { useOnboardingStore } from "../../store";
 import Headline from "../../components/headlines/Headline";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const incomeRanges = [
   { value: "0-1000", label: "0 - 1.000" },
@@ -14,12 +15,20 @@ const incomeRanges = [
 
 export default function Income() {
   const { t } = useTranslation();
-  const { income, setIncome, incomeValid, setIncomeValid } =
+  const navigate = useNavigate();
+  const { income, setIncome, incomeValid, setIncomeValid, nextOnboardingPage } =
     useOnboardingStore();
 
   const handleIncomeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newIncome = e.target.value;
     setIncome(newIncome);
+  };
+
+  const handleFormSubmit = (e: React.KeyboardEvent) => {
+    e.preventDefault();
+    if (incomeValid && e.key === "Enter") {
+      navigate(`/onboarding/${nextOnboardingPage}`);
+    }
   };
 
   useEffect(() => {
@@ -38,9 +47,11 @@ export default function Income() {
               className="flex items-center text-sm leading-0 font-medium leading-6 cursor-pointer"
             >
               <input
+                onKeyDown={handleFormSubmit}
                 type="radio"
                 id={`income-${index}`}
                 value={range.value}
+                autoFocus={income === range.value}
                 checked={income === range.value}
                 onChange={handleIncomeChange}
                 className="h-4 w-4 mr-2 checked:bg-cyan-700 checked:focus:bg-cyan-700 focus:ring-cyan-700 cursor-pointer"
