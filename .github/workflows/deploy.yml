@@ -89,6 +89,24 @@ jobs:
         NETLIFY_AUTH_TOKEN: ${{ secrets.SECRET_TOKEN }}
         NETLIFY_DEPLOY_TO_PROD: true
 
+  drop_cdn_cache:
+    needs: [deploy]
+    if: github.ref == 'refs/heads/main'
+    name: Drop CDN cache
+    runs-on: ubuntu-latest
+    steps:    
+    - name: Call Netlify API to drop cache
+      run: >
+        SITE_ID="${{ secrets.SITE_ID }}"
+        TOKEN="${{ secrets.SECRET_TOKEN }}"
+        API_URL="https://api.netlify.com/api/v1/sites/${SITE_ID}/builds"
+        
+        curl -X POST \
+            -H "Authorization: Bearer ${TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d '{"clear_cache": true}' \
+            ${API_URL}
+
   deploy_storybook:
     needs: [unit_specs, e2e_specs, linting]
     if: github.ref == 'refs/heads/main'
