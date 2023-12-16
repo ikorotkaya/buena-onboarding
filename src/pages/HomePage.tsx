@@ -16,6 +16,8 @@ export default function HomePage() {
     e.preventDefault();
 
     if (e.key === "Enter") {
+      e.stopPropagation();
+
       navigate(`/onboarding/${firstOnboardingPage}`);
     }
   };

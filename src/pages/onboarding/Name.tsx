@@ -25,6 +25,8 @@ export default function Name() {
     e.preventDefault();
 
     if (nameValid) {
+      e.stopPropagation();
+
       navigate(`/onboarding/${nextOnboardingPage}`);
     }
   };

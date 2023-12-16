@@ -24,7 +24,10 @@ export default function Email() {
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (emailValid) {
+      e.stopPropagation();
+
       navigate(`/onboarding/${nextOnboardingPage}`);
     }
   };

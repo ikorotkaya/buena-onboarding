@@ -22,7 +22,11 @@ export default function Summary() {
   );
 
   const handleKeyDown = (e: KeyboardEvent) => {
+    e.preventDefault();
+
     if (e.key === "Enter" && submitButtonEnabled) {
+      e.stopPropagation();
+
       navigate(`/final-page`);
     }
   };

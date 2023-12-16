@@ -28,7 +28,10 @@ export default function PhoneNumber() {
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (phoneNumberValid) {
+      e.stopPropagation();
+
       navigate(`/onboarding/${nextOnboardingPage}`);
     }
   };

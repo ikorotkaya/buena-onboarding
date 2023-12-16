@@ -25,8 +25,10 @@ export default function Income() {
   };
 
   const handleFormSubmit = (e: React.KeyboardEvent) => {
-    e.preventDefault();
     if (incomeValid && e.key === "Enter") {
+      e.preventDefault();
+      e.stopPropagation();
+
       navigate(`/onboarding/${nextOnboardingPage}`);
     }
   };
@@ -48,12 +50,13 @@ export default function Income() {
             >
               <input
                 onKeyDown={handleFormSubmit}
+                onChange={handleIncomeChange}
                 type="radio"
                 id={`income-${index}`}
+                name="income"
                 value={range.value}
-                autoFocus={income === range.value}
+                autoFocus={income ? income === range.value : index === 0}
                 checked={income === range.value}
-                onChange={handleIncomeChange}
                 className="h-4 w-4 mr-2 checked:bg-cyan-700 checked:focus:bg-cyan-700 focus:ring-cyan-700 cursor-pointer"
               />
 
