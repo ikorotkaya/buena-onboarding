@@ -18,12 +18,14 @@ describe("HomePage component", () => {
   });
 
   test("renders welcome message", () => {
-    const welcomeMessage = screen.getByText(i18n.t("pages.home.headline"));
+    const welcomeMessage = screen.getByText("Welcome to Buena");
     expect(welcomeMessage).toBeInTheDocument();
   });
 
   test("renders description", () => {
-    const description = screen.getByText(i18n.t("pages.home.subheadline"));
+    const description = screen.getByText(
+      "Enter your personal details and start your journey today."
+    );
     expect(description).toBeInTheDocument();
   });
 

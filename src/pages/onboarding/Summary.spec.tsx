@@ -3,18 +3,25 @@ import "@testing-library/jest-dom";
 import Summary from "./Summary";
 import { BrowserRouter } from "react-router-dom";
 import { useOnboardingStore } from "../../store";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../../i18n";
 
 describe("Summary onboarding screen", () => {
   const initStoreState = useOnboardingStore.getState();
 
   beforeEach(() => {
     useOnboardingStore.setState(initStoreState);
+    render(
+      <I18nextProvider i18n={i18n}>
+        <BrowserRouter>
+          <Summary />
+        </BrowserRouter>
+      </I18nextProvider>
+    );
   });
 
   test("renders the headline correctly", () => {
-    render(<Summary />, { wrapper: BrowserRouter });
-
-    expect(screen.getByText("Check your info:")).toBeInTheDocument();
+    expect(screen.getByText("Please review your details:")).toBeInTheDocument();
   });
 
   describe("when onboarding data is valid", () => {
@@ -29,8 +36,6 @@ describe("Summary onboarding screen", () => {
         phoneNumberValid: true,
         incomeValid: true
       });
-
-      render(<Summary />, { wrapper: BrowserRouter });
     });
 
     test("shows user input", () => {
@@ -61,8 +66,6 @@ describe("Summary onboarding screen", () => {
         phoneNumberValid: false,
         incomeValid: false
       });
-
-      render(<Summary />, { wrapper: BrowserRouter });
     });
 
     test("shows user input", () => {
@@ -93,8 +96,6 @@ describe("Summary onboarding screen", () => {
         phoneNumberValid: false,
         incomeValid: false
       });
-
-      render(<Summary />, { wrapper: BrowserRouter });
     });
 
     test("shows user input", () => {

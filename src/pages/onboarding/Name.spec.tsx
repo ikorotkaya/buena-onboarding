@@ -2,17 +2,25 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Name from "./Name";
 import { BrowserRouter } from "react-router-dom";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../../i18n";
 
 describe("Name onboarding screen", () => {
-  test("renders the headline correctly", () => {
-    render(<Name />, { wrapper: BrowserRouter });
+  beforeEach(() => {
+    render(
+      <I18nextProvider i18n={i18n}>
+        <BrowserRouter>
+          <Name />
+        </BrowserRouter>
+      </I18nextProvider>
+    );
+  });
 
-    expect(screen.getByText("What is your full name?")).toBeInTheDocument();
+  test("renders the headline correctly", () => {
+    expect(screen.getByText("What's your name?")).toBeInTheDocument();
   });
 
   test("renders the input field", () => {
-    render(<Name />, { wrapper: BrowserRouter });
-
     const inputField = screen.getByPlaceholderText("Jane Smith");
 
     expect(inputField).toBeInTheDocument();
@@ -20,8 +28,6 @@ describe("Name onboarding screen", () => {
 
   describe("when the input is blank", () => {
     test("does NOT show error message ", () => {
-      render(<Name />, { wrapper: BrowserRouter });
-
       // https://stackoverflow.com/questions/52783144/how-do-you-test-for-the-non-existence-of-an-element-using-jest-and-react-testing
       expect(screen.queryByTestId("input-error")).toBeNull();
     });
@@ -29,7 +35,6 @@ describe("Name onboarding screen", () => {
 
   describe("when the input is invalid (too short)", () => {
     test("shows error message ", () => {
-      render(<Name />, { wrapper: BrowserRouter });
       const inputElement = screen.getByPlaceholderText("Jane Smith");
 
       fireEvent.change(inputElement, { target: { value: "A" } });
@@ -37,7 +42,6 @@ describe("Name onboarding screen", () => {
     });
 
     test('disables the "Next" button', () => {
-      render(<Name />, { wrapper: BrowserRouter });
       const inputElement = screen.getByPlaceholderText("Jane Smith");
 
       fireEvent.change(inputElement, { target: { value: "A" } });
@@ -49,7 +53,6 @@ describe("Name onboarding screen", () => {
 
   describe("when the input is valid (at least 2 characters)", () => {
     test("does NOT show error message ", () => {
-      render(<Name />, { wrapper: BrowserRouter });
       const inputElement = screen.getByPlaceholderText("Jane Smith");
 
       fireEvent.change(inputElement, { target: { value: "John Doe" } });
@@ -57,7 +60,6 @@ describe("Name onboarding screen", () => {
     });
 
     test('enables the "Next" button', () => {
-      render(<Name />, { wrapper: BrowserRouter });
       const inputElement = screen.getByPlaceholderText("Jane Smith");
 
       fireEvent.change(inputElement, { target: { value: "John Doe" } });
