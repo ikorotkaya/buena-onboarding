@@ -1,27 +1,33 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import HomePage from "./HomePage";
 import { BrowserRouter } from "react-router-dom";
-
+import { I18nextProvider } from "react-i18next";
+import HomePage from "./HomePage";
+import i18n from "../i18n";
 // https://testing-library.com/docs/example-react-router/
 
 describe("HomePage component", () => {
+  beforeEach(() => {
+    render(
+      <I18nextProvider i18n={i18n}>
+        <BrowserRouter>
+          <HomePage />
+        </BrowserRouter>
+      </I18nextProvider>
+    );
+  });
+
   test("renders welcome message", () => {
-    render(<HomePage />, { wrapper: BrowserRouter });
-    const welcomeMessage = screen.getByText("Welcome to Buena");
+    const welcomeMessage = screen.getByText(i18n.t("pages.home.headline"));
     expect(welcomeMessage).toBeInTheDocument();
   });
 
   test("renders description", () => {
-    render(<HomePage />, { wrapper: BrowserRouter });
-    const description = screen.getByText(
-      "Enter your personal details and start your journey today."
-    );
+    const description = screen.getByText(i18n.t("pages.home.subheadline"));
     expect(description).toBeInTheDocument();
   });
 
   test("renders GetStartedButton", () => {
-    render(<HomePage />, { wrapper: BrowserRouter });
     const getStartedButton = screen.getByTestId("homepage-cta");
     expect(getStartedButton).toBeInTheDocument();
   });
