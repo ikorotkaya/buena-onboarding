@@ -21,17 +21,17 @@ export default function Summary() {
     (storeKey) => onboardingStore[storeKey as keyof OnboardingStore]
   );
 
-  const handleKeyDown = (e: KeyboardEvent) => {
-    e.preventDefault();
-
-    if (e.key === "Enter" && submitButtonEnabled) {
-      e.stopPropagation();
-
-      navigate(`/final-page`);
-    }
-  };
-
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      e.preventDefault();
+
+      if (e.key === "Enter" && submitButtonEnabled) {
+        e.stopPropagation();
+
+        navigate(`/final-page`);
+      }
+    };
+
     document.addEventListener("keydown", handleKeyDown);
 
     return () => {

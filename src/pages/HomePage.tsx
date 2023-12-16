@@ -12,17 +12,17 @@ export default function HomePage() {
   const navigate = useNavigate();
   const { firstOnboardingPage } = useOnboardingStore();
 
-  const handleKeyDown = (e: KeyboardEvent) => {
-    e.preventDefault();
-
-    if (e.key === "Enter") {
-      e.stopPropagation();
-
-      navigate(`/onboarding/${firstOnboardingPage}`);
-    }
-  };
-
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      e.preventDefault();
+
+      if (e.key === "Enter") {
+        e.stopPropagation();
+
+        navigate(`/onboarding/${firstOnboardingPage}`);
+      }
+    };
+
     document.addEventListener("keydown", handleKeyDown);
 
     return () => {
