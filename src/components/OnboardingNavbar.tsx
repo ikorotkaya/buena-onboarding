@@ -4,6 +4,7 @@ import { useOnboardingStore } from "../store";
 import SecondaryButton from "./buttons/SecondaryButton";
 import { useState, useEffect } from "react";
 import logo from "../../public/icons/logo.svg";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function OnboardingNavbar({
   className = ""
@@ -25,14 +26,19 @@ export default function OnboardingNavbar({
         <img className="h-5 grow-0" src={logo} alt="Buena" />
       </Link>
 
-      <div className="flex items-center ">
+      <div className="flex items-center">
         {currentPageIndex > 0 && (
-          <SecondaryButton link={`/onboarding/${previousPage}`} />
+          <SecondaryButton
+            className="mr-5"
+            link={`/onboarding/${previousPage}`}
+          />
         )}
 
-        <div className="leading-none text-neutral-500">
+        <div className="leading-none text-neutral-500 mr-6 md:hidden">
           {currentPageIndex + 1} / {pages.length}
         </div>
+
+        <LanguageSwitcher />
       </div>
     </nav>
   );

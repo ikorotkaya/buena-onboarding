@@ -30,7 +30,7 @@ export default function Sidebar() {
   return (
     <div className="h-screen bg-sky-100	 hidden md:block">
       <div className="mb-32">
-        <Navbar />
+        <Navbar showLanguageSwitcher={false} />
       </div>
 
       <div className="px-4 py-12 sm:px-6 lg:px-8">
