@@ -20,10 +20,6 @@ function App() {
 
   useEffect(() => {
     setCurrentPageIndex(getCurrentPageIndex());
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  useEffect(() => {
-    setCurrentPageIndex(getCurrentPageIndex());
   }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
