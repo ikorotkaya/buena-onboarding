@@ -22,7 +22,7 @@ export default function LanguageSwitcher() {
     <div className="relative flex items-center justify-end">
       <div role="button" className="language-icon w-7" onClick={toggleMenu}>
         <img
-          src={`/src/icons/languages/${i18n.language}.svg`}
+          src={`/icons/languages/${i18n.language}.svg`}
           alt={t("components.LanguageSwitcher.choose_language")}
         />
       </div>

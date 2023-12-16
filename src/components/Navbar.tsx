@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../icons/logo.svg";
+import logo from "../../public/icons/logo.svg";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
