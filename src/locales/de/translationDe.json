@@ -6,7 +6,8 @@
     "home": {
       "headline": "Willkommen in Buena",
       "subheadline": "Geben Sie Ihre persönlichen Daten ein und starten Sie noch heute Ihre Reise.",
-      "cta": "Los geht's!"
+      "cta": "Los geht's!",
+      "press_enter_to_start_onboarding": "oder drücken Sie ENTER, um das Onboarding zu starten."
     },
 
     "name": {

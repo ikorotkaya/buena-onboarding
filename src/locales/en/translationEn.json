@@ -6,7 +6,8 @@
     "home": {
       "headline": "Welcome to Buena",
       "subheadline": "Enter your personal details and start your journey today.",
-      "cta": "Get started"
+      "cta": "Get started",
+      "press_enter_to_start_onboarding": "or press ENTER to start the onboarding."
     },
 
     "name": {

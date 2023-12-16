@@ -31,21 +31,23 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="grid grid-rows-[3fr,2fr,1fr] ">
-      <div className="flex items-end justify-center text-center">
-        <Headline>{t("pages.home.headline")}</Headline>
-      </div>
+    <div className="pt-24 flex flex-col items-center justify-center">
+      <Headline>{t("pages.home.headline")}</Headline>
 
-      <Subheadline>{t("pages.home.subheadline")}</Subheadline>
+      <Subheadline className="mb-12">{t("pages.home.subheadline")}</Subheadline>
 
-      <div className="flex flex-row justify-center items-end pb-4">
+      <div className="flex flex-col items-center justify-center max-w-xl">
         <AnimatedPrimaryButton
           link={`/onboarding/${ONBOARDING_STEPS[0].slug}`}
           testId="homepage-cta"
-          className="md:w-auto px-10 py-4 text-xl"
+          className="md:w-auto mb-4 px-10 py-4 text-xl"
         >
           {t("pages.home.cta")}
         </AnimatedPrimaryButton>
+
+        <div className="text-xs text-stone-500">
+          {t("pages.home.press_enter_to_start_onboarding")}
+        </div>
       </div>
     </div>
   );
