@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 export default function HomePage() {
   const { t } = useTranslation();
+
   return (
     <div className="grid grid-rows-[3fr,2fr,1fr] ">
       <div className="flex items-end justify-center text-center">
@@ -18,7 +19,7 @@ export default function HomePage() {
         <AnimatedPrimaryButton
           link={`/onboarding/${ONBOARDING_STEPS[0].slug}`}
           testId="homepage-cta"
-          className="md:w-auto"
+          className="md:w-auto px-10 py-4 text-xl"
         >
           {t("pages.home.cta")}
         </AnimatedPrimaryButton>
