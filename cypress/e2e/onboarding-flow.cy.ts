@@ -9,7 +9,7 @@ describe("Onboarding Flow", () => {
 
     cy.url().should("eq", "http://localhost:5173/onboarding/name");
 
-    cy.contains("What is your full name?");
+    cy.contains("What's your name?");
     cy.contains("Please enter a valid name.").should("not.exist");
 
     const nextButton = cy.get("a:contains(Next):visible");
@@ -25,7 +25,7 @@ describe("Onboarding Flow", () => {
 
     cy.url().should("eq", "http://localhost:5173/onboarding/email");
 
-    cy.contains("What is your email?");
+    cy.contains("What's your email address?");
     cy.contains("Please enter a valid email address.").should("not.exist");
 
     nextButton.get("a:contains(Next):visible");
@@ -41,7 +41,7 @@ describe("Onboarding Flow", () => {
 
     cy.url().should("eq", "http://localhost:5173/onboarding/phone");
 
-    cy.contains("What is your phone number?");
+    cy.contains("What's your phone number?");
     cy.contains("Please enter a valid phone number.").should("not.exist");
 
     nextButton.get("a:contains(Next):visible");
@@ -57,7 +57,7 @@ describe("Onboarding Flow", () => {
 
     cy.url().should("eq", "http://localhost:5173/onboarding/income");
 
-    cy.contains("What is your income?");
+    cy.contains("What's your income?");
 
     nextButton.get("a:contains(Next):visible");
     nextButton.should("have.css", "pointer-events", "none");
@@ -74,7 +74,7 @@ describe("Onboarding Flow", () => {
 
     cy.url().should("eq", "http://localhost:5173/onboarding/summary");
 
-    cy.contains("Check your info:");
+    cy.contains("Please review your details:");
     cy.contains("Jane Smith");
     cy.contains("hi@hello.com");
     cy.contains("1234567890");
