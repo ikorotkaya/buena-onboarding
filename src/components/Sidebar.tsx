@@ -4,8 +4,11 @@ import ONBOARDING_PAGES from "../../onboarding-pages.json";
 import { useOnboardingStore } from "../store";
 import Navbar from "./Navbar";
 import type { OnboardingStore } from "../store";
+import { useTranslation } from "react-i18next";
 
 export default function Sidebar() {
+  const { t } = useTranslation();
+
   const { currentPageIndex } = useOnboardingStore();
   const onboardingStore = useOnboardingStore();
 
@@ -34,7 +37,7 @@ export default function Sidebar() {
         <nav className="flex justify-center" aria-label="Progress">
           <ol role="list" className="space-y-6">
             {ONBOARDING_PAGES.map((step, index) => (
-              <li key={step.name}>
+              <li key={step.slug}>
                 {isStepActive(index) && (
                   <Link
                     to={step.slug}
@@ -50,7 +53,7 @@ export default function Sidebar() {
                       <span className="relative block h-2 w-2 rounded-full bg-cyan-700" />
                     </span>
                     <span className="ml-3 text-sm font-medium text-cyan-700">
-                      {step.name}
+                      {t(`pages.${step.slug}.onboardingStepName`)}
                     </span>
                   </Link>
                 )}
@@ -75,7 +78,7 @@ export default function Sidebar() {
                             : "text-gray-500"
                         }`}
                       >
-                        {step.name}
+                        {t(`pages.${step.slug}.onboardingStepName`)}
                       </span>
                     </span>
                   </Link>
@@ -91,7 +94,7 @@ export default function Sidebar() {
                         <div className="h-2 w-2 rounded-full bg-gray-400" />
                       </div>
                       <p className="ml-3 text-sm font-medium text-gray-500">
-                        {step.name}
+                        {t(`pages.${step.slug}.onboardingStepName`)}
                       </p>
                     </div>
                   </Link>

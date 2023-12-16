@@ -10,26 +10,31 @@
     },
 
     "name": {
+      "onboardingStepName": "Name",
       "headline": "Wie lautet Ihr Name?",
       "errorMessage": "Bitte geben Sie Ihren vollständigen Namen ein.",
       "placeholder": "Jan Schmidt"
     },
 
     "email": {
+      "onboardingStepName": "E-Mail",
       "headline": "Wie lautet Ihre E-Mail-Adresse?",
       "errorMessage": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
     },
 
     "phone": {
+      "onboardingStepName": "Telefon",
       "headline": "Wie lautet Ihre Telefonnummer?",
       "errorMessage": "Bitte geben Sie eine gültige Telefonnummer ein"
     },
 
     "income": {
+      "onboardingStepName": "Einkommen",
       "headline": "Was ist Ihr Einkommen?"
     },
 
     "summary": {
+      "onboardingStepName": "Zusammenfassung",
       "headline": "Bitte überprüfen Sie Ihre Angaben:",
       "cta": "Absenden"
     },

@@ -10,26 +10,31 @@
     },
 
     "name": {
+      "onboardingStepName": "Name",
       "headline": "What's your name?",
       "errorMessage": "Please enter a valid name.",
       "placeholder": "Jane Smith"
     },
 
     "email": {
+      "onboardingStepName": "Email",
       "headline": "What's your email address?",
       "errorMessage": "Please enter a valid email address."
     },
 
     "phone": {
+      "onboardingStepName": "Phone",
       "headline": "What's your phone number?",
       "errorMessage": "Please enter a valid phone number."
     },
 
     "income": {
+      "onboardingStepName": "Income",
       "headline": "What's your income?"
     },
 
     "summary": {
+      "onboardingStepName": "Summary",
       "headline": "Please review your details:",
       "cta": "Submit"
     },

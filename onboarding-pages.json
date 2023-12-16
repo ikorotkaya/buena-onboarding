@@ -1,7 +1,7 @@
 [
-  { "name": "Name", "slug": "name", "storeKey": "nameValid" },
-  { "name": "Email", "slug": "email", "storeKey": "emailValid" }, 
-  { "name": "Phone number", "slug": "phone", "storeKey": "phoneNumberValid" }, 
-  { "name": "Income", "slug": "income", "storeKey": "incomeValid" }, 
-  { "name": "Summary", "slug": "summary", "storeKey": null }
+  { "slug": "name", "storeKey": "nameValid" },
+  { "slug": "email", "storeKey": "emailValid" }, 
+  { "slug": "phone", "storeKey": "phoneNumberValid" }, 
+  { "slug": "income", "storeKey": "incomeValid" }, 
+  { "slug": "summary", "storeKey": null }
 ]
