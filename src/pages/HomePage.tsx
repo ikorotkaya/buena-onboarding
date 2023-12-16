@@ -28,7 +28,7 @@ export default function HomePage() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [firstOnboardingPage, navigate]);
 
   return (
     <div className="pt-24 flex flex-col items-center justify-center">

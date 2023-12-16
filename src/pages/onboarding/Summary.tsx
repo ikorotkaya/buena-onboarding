@@ -37,7 +37,7 @@ export default function Summary() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [navigate, submitButtonEnabled]);
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
