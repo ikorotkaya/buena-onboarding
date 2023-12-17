@@ -5,7 +5,7 @@ export default function ArrowRightIcon({
 }) {
   return (
     <svg
-      className={`w-4 h-4 ${className}`}
+      className={`h-4 w-4 ${className}`}
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"

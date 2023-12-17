@@ -31,16 +31,16 @@ export default function HomePage() {
   }, [firstOnboardingPage, navigate]);
 
   return (
-    <div className="pt-24 flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center pt-24">
       <Headline>{t("pages.home.headline")}</Headline>
 
       <Subheadline className="mb-12">{t("pages.home.subheadline")}</Subheadline>
 
-      <div className="flex flex-col items-center justify-center max-w-xl">
+      <div className="flex max-w-xl flex-col items-center justify-center">
         <AnimatedPrimaryButton
           link={`/onboarding/${ONBOARDING_STEPS[0].slug}`}
           testId="homepage-cta"
-          className="md:w-auto mb-4 px-10 py-4 text-xl"
+          className="mb-4 px-10 py-4 text-xl md:w-auto"
         >
           {t("pages.home.cta")}
         </AnimatedPrimaryButton>

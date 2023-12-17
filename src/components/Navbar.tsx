@@ -8,7 +8,7 @@ export default function Navbar({
   showLanguageSwitcher?: boolean;
 }) {
   return (
-    <nav className="flex items-center justify-between px-8 py-7 h-20 max-h-20">
+    <nav className="flex h-20 max-h-20 items-center justify-between px-8 py-7">
       <Link to="/">
         <img className="h-5" src={logo} alt="Buena" />
       </Link>

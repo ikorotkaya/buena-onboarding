@@ -20,21 +20,21 @@ export default function AnimatedPrimaryButton({
       <Link
         to={link}
         data-testid={testId}
-        className={`relative w-full inline-flex items-center justify-center 
-          px-6 py-3 overflow-hidden font-medium transition duration-300 ease-out 
-          bg-cyan-700 rounded text-white group ${className} 
+        className={`group relative inline-flex w-full items-center 
+          justify-center overflow-hidden rounded bg-cyan-700 px-6 py-3 font-medium 
+          text-white transition duration-300 ease-out ${className} 
           ${
             disabled
-              ? "bg-neutral-400 text-white pointer-events-none"
+              ? "pointer-events-none bg-neutral-400 text-white"
               : "cursor-pointer"
           }`}
       >
         <span
-          className="absolute inset-0 flex items-center justify-center w-full h-full
-        text-white duration-300 -translate-x-full group-hover:translate-x-0 ease"
+          className="ease absolute inset-0 flex h-full w-full -translate-x-full
+        items-center justify-center text-white duration-300 group-hover:translate-x-0"
         >
           <svg
-            className="w-6 h-6"
+            className="h-6 w-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -49,12 +49,12 @@ export default function AnimatedPrimaryButton({
           </svg>
         </span>
         <span
-          className="absolute flex items-center justify-center w-full h-full 
-          text-white transition-all duration-300 transform group-hover:translate-x-full ease"
+          className="ease absolute flex h-full w-full items-center 
+          justify-center text-white transition-all duration-300 group-hover:translate-x-full"
         >
           {children}
         </span>
-        <span className="relative invisible">{children}</span>
+        <span className="invisible relative">{children}</span>
       </Link>
     </>
   );

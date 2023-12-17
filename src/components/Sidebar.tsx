@@ -28,7 +28,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="h-screen bg-sky-100	 hidden md:block">
+    <div className="hidden h-screen	 bg-sky-100 md:block">
       <div className="mb-32">
         <Navbar showLanguageSwitcher={false} />
       </div>
@@ -46,7 +46,7 @@ export default function Sidebar() {
                     data-testid="active-step"
                   >
                     <span
-                      className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center"
+                      className="relative flex h-5 w-5 shrink-0 items-center justify-center"
                       aria-hidden="true"
                     >
                       <span className="absolute h-4 w-4 rounded-full bg-cyan-300/50" />
@@ -65,7 +65,7 @@ export default function Sidebar() {
                     data-testid="completed-step"
                   >
                     <span className="flex items-start">
-                      <span className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center">
+                      <span className="relative flex h-5 w-5 shrink-0 items-center justify-center">
                         <CheckCircleIcon
                           className={`h-full w-full text-cyan-700`}
                           aria-hidden="true"
@@ -88,7 +88,7 @@ export default function Sidebar() {
                   <Link data-testid="inactive-step" to={step.slug}>
                     <div className="flex items-start">
                       <div
-                        className="relative flex h-5 w-5 flex-shrink-0 items-center justify-center"
+                        className="relative flex h-5 w-5 shrink-0 items-center justify-center"
                         aria-hidden="true"
                       >
                         <div className="h-2 w-2 rounded-full bg-gray-400" />

@@ -20,7 +20,7 @@ export default function OnboardingNavbar({
 
   return (
     <nav
-      className={`flex w-full h-20 max-h-20 items-center justify-between ${className}`}
+      className={`flex h-20 max-h-20 w-full items-center justify-between ${className}`}
     >
       <Link className="grow-0" to="/">
         <img className="h-5 grow-0" src={logo} alt="Buena" />
@@ -34,7 +34,7 @@ export default function OnboardingNavbar({
           />
         )}
 
-        <div className="leading-none text-neutral-500 mr-6 md:hidden">
+        <div className="mr-6 leading-none text-neutral-500 md:hidden">
           {currentPageIndex + 1} / {pages.length}
         </div>
 

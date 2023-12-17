@@ -26,13 +26,13 @@ export default function OnboardingLayout() {
   }, [currentPageIndex, onboardingStore]);
 
   return (
-    <div className="grid col-auto	p-8 md:p-0 md:grid-cols-[1fr,2fr] md:h-screen">
+    <div className="col-auto grid	p-8 md:h-screen md:grid-cols-[1fr,2fr] md:p-0">
       <aside className="hidden md:block">
         <Sidebar />
       </aside>
 
       <main className="">
-        <OnboardingNavbar className="px-8 py-7 fixed top-0 left-0" />
+        <OnboardingNavbar className="fixed left-0 top-0 px-8 py-7" />
 
         <div className="px-0 md:px-16">
           <Outlet />

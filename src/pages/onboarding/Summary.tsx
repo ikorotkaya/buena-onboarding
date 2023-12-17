@@ -45,7 +45,7 @@ export default function Summary() {
 
       <div
         data-testid="summary"
-        className="mb-12 grid grid-cols-[1fr,2fr] gap-1 border-dashed border-[1px] border-stone-300 rounded-md"
+        className="mb-12 grid grid-cols-[1fr,2fr] gap-1 rounded-md border-[1px] border-dashed border-stone-300"
       >
         <div className="px-4 py-2">{t(`pages.name.onboardingStepName`)}:</div>
         <div className="px-4 py-2">{name}</div>
@@ -57,7 +57,7 @@ export default function Summary() {
         <div className="px-4 py-2">{income}</div>
       </div>
 
-      <div className="py-4 px-8 md:p-0 w-full fixed md:relative bottom-0 left-0">
+      <div className="fixed bottom-0 left-0 w-full px-8 py-4 md:relative md:p-0">
         <AnimatedPrimaryButton
           link="/final-page"
           testId="submit-button"

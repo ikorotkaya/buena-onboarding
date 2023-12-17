@@ -41,12 +41,12 @@ export default function Income() {
     <div className="flex flex-col pt-52 md:max-w-xl">
       <Headline style="3xl">{t("pages.income.headline")}</Headline>
 
-      <div className="space-y-4 mb-4">
+      <div className="mb-4 space-y-4">
         {incomeRanges.map((range, index) => (
           <div key={range.value} className="flex items-center">
             <label
               htmlFor={`income-${index}`}
-              className="flex items-center text-sm leading-0 font-medium leading-6 cursor-pointer"
+              className="flex cursor-pointer items-center text-sm font-medium leading-6"
             >
               <input
                 onKeyDown={handleFormSubmit}
@@ -57,7 +57,7 @@ export default function Income() {
                 value={range.value}
                 autoFocus={income ? income === range.value : index === 0}
                 checked={income === range.value}
-                className="h-4 w-4 mr-2 checked:bg-cyan-700 checked:focus:bg-cyan-700 focus:ring-cyan-700 cursor-pointer"
+                className="mr-2 h-4 w-4 cursor-pointer checked:bg-cyan-700 focus:ring-cyan-700 checked:focus:bg-cyan-700"
               />
 
               {range.label}

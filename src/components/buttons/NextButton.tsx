@@ -17,18 +17,18 @@ export default function NextButton({
 
   return (
     <div
-      className={`flex flex-row justify-between gap-4 px-8 py-4 md:p-0 w-full ${className}`}
+      className={`flex w-full flex-row justify-between gap-4 px-8 py-4 md:p-0 ${className}`}
     >
       {nextOnboardingPage && (
         <Link
           to={`/onboarding/${nextOnboardingPage}`}
           data-testid="next-button"
-          className={`w-full md:w-auto flex md:ml-auto items-center justify-center 
-            px-6 py-3 text-base font-medium whitespace-no-wrap text-white rounded-md
+          className={`flex w-full items-center justify-center whitespace-nowrap rounded-md 
+            px-6 py-3 text-base font-medium text-white md:ml-auto md:w-auto
             ${
               disabled
-                ? "bg-neutral-400 pointer-events-none"
-                : "bg-neutral-900  md:hover:bg-neutral-700 focus:outline-none"
+                ? "pointer-events-none bg-neutral-400"
+                : "bg-neutral-900  focus:outline-none md:hover:bg-neutral-700"
             }
           `}
         >

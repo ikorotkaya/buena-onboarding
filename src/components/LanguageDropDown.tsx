@@ -22,13 +22,13 @@ export default function LanguageDropDownMenu({
 
   return (
     <div
-      className="menu-dropdown top-full flex flex-col items-center absolute 
-      right-0 z-10 rounded-md md:w-max w-max origin-top-right border-2 
-      text-stone-900 md:border-stone-900 border-white bg-white "
+      className="absolute right-0 top-full z-10 flex 
+      w-max origin-top-right flex-col items-center rounded-md border-2 border-white 
+      bg-white text-stone-900 md:w-max md:border-stone-900 "
     >
       {availableLanguages.map((language) => (
         <div
-          className="flex flex-col items-center justify-center cursor-pointer hover:bg-[#80DCAC] p-2 w-24 first:rounded-t-md last:rounded-b-md"
+          className="flex w-24 cursor-pointer flex-col items-center justify-center p-2 first:rounded-t-md last:rounded-b-md hover:bg-[#80DCAC]"
           key={language}
           onClick={() => handleChange(language)}
         >

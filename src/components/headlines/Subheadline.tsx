@@ -10,7 +10,7 @@ export default function Subheadline({
   return (
     <div
       className={`flex justify-center text-center text-lg 
-        md:text-2xl leading-6 text-stone-500 ${className}`}
+        leading-6 text-stone-500 md:text-2xl ${className}`}
     >
       {children}
     </div>

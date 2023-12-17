@@ -15,9 +15,9 @@ export default function SecondaryButton({
   return (
     <Link
       to={link}
-      className={`flex text-sm items-center px-4 py-1 border rounded-full ${className}`}
+      className={`flex items-center rounded-full border px-4 py-1 text-sm ${className}`}
     >
-      <ArrowLeftIcon className="w-4 mr-2" />
+      <ArrowLeftIcon className="mr-2 w-4" />
       {t("backButton")}
     </Link>
   );
