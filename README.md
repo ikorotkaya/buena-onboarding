@@ -56,6 +56,7 @@ Of course, I was short on time and haven't done everything I wanted to do. Here'
 - [ ] Introduce a design system and align the look and feel of all components
 - [ ] Add more animations and transitions
 - [ ] Add more unit and E2E tests
+- [ ] Dockerize the app
 
 ## Development 
 
