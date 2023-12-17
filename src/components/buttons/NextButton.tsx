@@ -28,7 +28,7 @@ export default function NextButton({
           <Link
             to={`/onboarding/${nextOnboardingPage}`}
             data-testid="next-button"
-            className={`flex  items-center justify-center whitespace-nowrap 
+            className={`flex items-center justify-center whitespace-nowrap 
               rounded-md px-6 py-3 text-base font-medium text-white 
               ${
                 disabled
