@@ -33,7 +33,7 @@ export default function NextButton({
               ${
                 disabled
                   ? "pointer-events-none bg-neutral-400"
-                  : "bg-neutral-900  focus:outline-none md:hover:bg-neutral-700"
+                  : "bg-neutral-900 transition-colors duration-500 focus:outline-none md:hover:bg-neutral-700"
               }
             `}
           >
