@@ -14,6 +14,7 @@ export type OnboardingStore = {
   emailValid: boolean;
   phoneNumberValid: boolean;
   incomeValid: boolean;
+  reset: () => void;
 
   setName: (name: string) => void;
   setEmail: (email: string) => void;
@@ -56,7 +57,22 @@ export const useOnboardingStore = create(
       setNameValid: (nameValid) => set({ nameValid }),
       setEmailValid: (emailValid) => set({ emailValid }),
       setPhoneNumberValid: (phoneNumberValid) => set({ phoneNumberValid }),
-      setIncomeValid: (incomeValid) => set({ incomeValid })
+      setIncomeValid: (incomeValid) => set({ incomeValid }),
+      reset: () => {
+        set({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          income: "",
+          currentPageIndex: 0,
+          firstOnboardingPage: pages[0],
+          nextOnboardingPage: pages[1],
+          nameValid: false,
+          emailValid: false,
+          phoneNumberValid: false,
+          incomeValid: false
+        });
+      }
     }),
     {
       name: "onboarding-storage",

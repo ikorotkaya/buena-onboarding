@@ -28,6 +28,8 @@ export default function Summary() {
       if (e.key === "Enter" && submitButtonEnabled) {
         e.stopPropagation();
 
+        onboardingStore.reset();
+
         navigate(`/final-page`);
       }
     };
@@ -37,7 +39,7 @@ export default function Summary() {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [navigate, submitButtonEnabled]);
+  }, [navigate, submitButtonEnabled, onboardingStore]);
 
   return (
     <div className="flex flex-col pt-52 md:max-w-xl">
@@ -62,6 +64,7 @@ export default function Summary() {
           link="/final-page"
           testId="submit-button"
           disabled={!submitButtonEnabled}
+          onClick={() => onboardingStore.reset()}
         >
           {t("pages.summary.cta")}
         </AnimatedPrimaryButton>

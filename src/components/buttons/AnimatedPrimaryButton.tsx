@@ -6,6 +6,7 @@ export interface AnimatedPrimaryButtonProps {
   className?: string;
   disabled?: boolean;
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
 export default function AnimatedPrimaryButton({
@@ -13,13 +14,15 @@ export default function AnimatedPrimaryButton({
   testId,
   className = "",
   disabled = false,
-  children
+  children,
+  onClick
 }: AnimatedPrimaryButtonProps) {
   return (
     <>
       <Link
         to={link}
         data-testid={testId}
+        onClick={onClick}
         className={`group relative inline-flex w-full items-center 
           justify-center overflow-hidden rounded bg-cyan-700 px-6 py-3 font-medium 
           text-white transition duration-300 ease-out ${className} 
