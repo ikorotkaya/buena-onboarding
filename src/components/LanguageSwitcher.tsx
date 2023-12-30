@@ -14,14 +14,20 @@ export default function LanguageSwitcher() {
     document.addEventListener("click", (event) => {
       const target = event.target as HTMLElement;
       if (!menuOpen) return;
-      if (menuOpen && !target.closest(".js-language-icon")) setMenuOpen(false);
+      if (menuOpen && !target.closest("[data-testid='language-switcher-icon']"))
+        setMenuOpen(false);
     });
   }, [menuOpen]);
 
   return (
     <div className="relative flex items-center justify-end">
       {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
-      <div role="button" className="js-language-icon w-7" onClick={toggleMenu}>
+      <div
+        role="button"
+        data-testid="language-switcher-icon"
+        className="w-7"
+        onClick={toggleMenu}
+      >
         <img
           src={`/icons/languages/${i18n.language}.svg`}
           alt={t("components.LanguageSwitcher.choose_language")}
